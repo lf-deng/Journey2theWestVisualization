@@ -1,0 +1,188 @@
+{
+    "metadata": {
+        "title": "西游记数据分析",
+        "source": "四大名著",
+        "totalChapters": 100,
+        "mainCharacters": 4,
+        "totalCharacters": 84,
+        "generationDate": "2024-12-19"
+    },
+    "network": {
+        "description": "人物关系网络数据",
+        "nodes": [
+            {
+                "name": "唐僧",
+                "value": 100,
+                "category": "主角"
+            },
+            {
+                "name": "孙悟空",
+                "value": 150,
+                "category": "主角"
+            },
+            {
+                "name": "猪八戒",
+                "value": 120,
+                "category": "主角"
+            },
+            {
+                "name": "沙和尚",
+                "value": 80,
+                "category": "主角"
+            },
+            {
+                "name": "如来佛祖",
+                "value": 60,
+                "category": "神仙"
+            },
+            {
+                "name": "观世音菩萨",
+                "value": 85,
+                "category": "神仙"
+            },
+            {
+                "name": "玉皇大帝",
+                "value": 55,
+                "category": "神仙"
+            },
+            {
+                "name": "白骨精",
+                "value": 70,
+                "category": "妖怪"
+            },
+            {
+                "name": "铁扇公主",
+                "value": 65,
+                "category": "妖怪"
+            },
+            {
+                "name": "牛魔王",
+                "value": 60,
+                "category": "妖怪"
+            }
+        ],
+        "edges": 15,
+        "categories": [
+            "主角",
+            "神仙",
+            "妖怪"
+        ]
+    },
+    "character": {
+        "demonOrigin": {
+            "heavenlyDescent": 35,
+            "nativeSpirit": 42,
+            "other": 23
+        },
+        "demonEnding": {
+            "killed": 45,
+            "subdued": 38,
+            "returned": 17
+        },
+        "deitySectsFrequency": {
+            "taoism": [
+                12,
+                18,
+                15,
+                12,
+                8
+            ],
+            "buddhism": [
+                8,
+                12,
+                18,
+                22,
+                28
+            ]
+        }
+    },
+    "wordFrequency": {
+        "topWords": [
+            {
+                "word": "取经",
+                "frequency": 198,
+                "category": "全书"
+            },
+            {
+                "word": "唐僧",
+                "frequency": 156,
+                "category": "全书"
+            },
+            {
+                "word": "孙悟空",
+                "frequency": 182,
+                "category": "全书"
+            },
+            {
+                "word": "妖怪",
+                "frequency": 167,
+                "category": "全书"
+            },
+            {
+                "word": "大圣",
+                "frequency": 145,
+                "category": "全书"
+            }
+        ],
+        "earlyChapters": [
+            {
+                "word": "大闹天宫",
+                "frequency": 145
+            },
+            {
+                "word": "齐天大圣",
+                "frequency": 156
+            },
+            {
+                "word": "石猴",
+                "frequency": 67
+            }
+        ],
+        "lateChapters": [
+            {
+                "word": "灵山",
+                "frequency": 145
+            },
+            {
+                "word": "佛法",
+                "frequency": 112
+            },
+            {
+                "word": "阿弥陀佛",
+                "frequency": 89
+            }
+        ]
+    },
+    "sentiment": {
+        "positiveKeywords": 62,
+        "neutralKeywords": 24,
+        "negativeKeywords": 14,
+        "topKeywords": [
+            {
+                "keyword": "聪慧",
+                "mentions": 156,
+                "sentiment": "positive"
+            },
+            {
+                "keyword": "勇敢",
+                "mentions": 145,
+                "sentiment": "positive"
+            },
+            {
+                "keyword": "善良",
+                "mentions": 189,
+                "sentiment": "positive"
+            },
+            {
+                "keyword": "执着",
+                "mentions": 178,
+                "sentiment": "positive"
+            },
+            {
+                "keyword": "幽默",
+                "mentions": 145,
+                "sentiment": "positive"
+            }
+        ]
+    }
+}

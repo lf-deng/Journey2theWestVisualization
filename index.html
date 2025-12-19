@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西游记数据可视化分析平台</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="#">🎭 西游记数据可视化</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">首页</a></li>
+                <li><a href="#network">人物关系网络</a></li>
+                <li><a href="#character">人物特征分析</a></li>
+                <li><a href="#route">取经路线</a></li>
+                <li><a href="#wordcloud">高频词汇</a></li>
+                <li><a href="#sentiment">评价分析</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== 容器 ========== -->
+    <div class="container">
+        <!-- ========== 首页 ========== -->
+        <div id="home" class="page active">
+            <div class="page-header">
+                <h1 class="page-title">🎭 西游记数据可视化分析平台</h1>
+                <p class="page-description">
+                    基于四大名著之一《西游记》的全面数据分析与可视化展示平台。通过多维度分析，深入挖掘人物关系、特征分布、故事线索等关键信息。
+                </p>
+            </div>
+
+            <div class="charts-grid triple">
+                <div class="card">
+                    <h3>📊 人物关系网络</h3>
+                    <p>展示西游记中各角色之间的复杂关系，通过节点和边的连接，呈现人物的交互网络。</p>
+                    <a href="#network" class="btn" style="margin-top: 1rem;">进入查看</a>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 人物特征分析</h3>
+                    <p>分析妖怪来历、妖怪结局、神仙派系等特征，用图表展示各类别的占比分布。</p>
+                    <a href="#character" class="btn" style="margin-top: 1rem;">进入查看</a>
+                </div>
+
+                <div class="card">
+                    <h3>🗺️ 取经路线</h3>
+                    <p>交互式展示唐僧师徒四人的取经路线，标注主要事件和停留地点。</p>
+                    <a href="#route" class="btn" style="margin-top: 1rem;">进入查看</a>
+                </div>
+
+                <div class="card">
+                    <h3>☁️ 高频词汇分析</h3>
+                    <p>通过词云和热力图展示全书及各角色的高频词汇，分析故事前期和后期的词汇变化。</p>
+                    <a href="#wordcloud" class="btn" style="margin-top: 1rem;">进入查看</a>
+                </div>
+
+                <div class="card">
+                    <h3>💬 读者评价分析</h3>
+                    <p>展示读者对人物的关键词评价和情感倾向，呈现社会反响和评价焦点。</p>
+                    <a href="#sentiment" class="btn" style="margin-top: 1rem;">进入查看</a>
+                </div>
+
+                <div class="card">
+                    <h3>📈 数据统计</h3>
+                    <p>包含全书基本统计数据，如回数、人物数量、事件数量等核心指标。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 人物关系网络 ========== -->
+        <div id="network" class="page">
+            <div class="page-header">
+                <h1 class="page-title">人物关系网络可视化</h1>
+                <p class="page-description">
+                    展示西游记中主要人物之间的关系网络。节点代表人物，边代表人物之间的联系。节点大小表示出场频率，颜色代表人物类型。
+                </p>
+            </div>
+
+            <div class="chart-container">
+                <div id="network-chart" class="chart-wrapper"></div>
+            </div>
+
+            <div class="charts-grid dual" style="grid-template-columns: 1fr 1fr;">
+                <div class="card">
+                    <h4>📋 图表说明</h4>
+                    <ul style="padding-left: 1.5rem;">
+                        <li>节点大小：代表人物出场频率</li>
+                        <li>节点颜色：不同颜色代表不同类型的人物</li>
+                        <li>连接线：表示两个人物之间的相关性</li>
+                        <li>交互功能：支持拖拽和缩放</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🎯 主要人物</h4>
+                    <p id="network-stats" style="line-height: 2;">加载中...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 人物特征分析 ========== -->
+        <div id="character" class="page">
+            <div class="page-header">
+                <h1 class="page-title">人物特征分析</h1>
+                <p class="page-description">
+                    从多个维度分析西游记中人物的特征，包括妖怪分类、妖怪结局、神仙派系等。
+                </p>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>妖怪来历分布</h3>
+                    </div>
+                    <div id="demon-origin-chart" class="chart-wrapper short"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>妖怪结局分布</h3>
+                    </div>
+                    <div id="demon-ending-chart" class="chart-wrapper short"></div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div style="padding: 1rem;">
+                    <h3>神仙派系对比 - 出场频次</h3>
+                </div>
+                <div id="deity-sect-chart" class="chart-wrapper short"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="card">
+                    <h4>📊 数据说明</h4>
+                    <ul style="padding-left: 1.5rem;">
+                        <li><strong>妖怪来历：</strong>天庭下凡、本土成精、其他</li>
+                        <li><strong>妖怪结局：</strong>被击杀、被收服、被神仙带回</li>
+                        <li><strong>神仙派系：</strong>道教、佛教</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🔍 分析视角</h4>
+                    <p>通过饼图和柱状图展示不同人物特征的分布，帮助理解故事中的人物构成和发展脉络。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 取经路线 ========== -->
+        <div id="route" class="page">
+            <div class="page-header">
+                <h1 class="page-title">取经路线交互式可视化</h1>
+                <p class="page-description">
+                    展示唐僧师徒四人从长安到灵山的取经历程，标注主要事件、磨难和停留时长。
+                </p>
+            </div>
+
+            <div class="chart-container">
+                <div id="route-chart" class="chart-wrapper tall"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="card">
+                    <h4>📍 路线信息</h4>
+                    <p id="route-info" style="line-height: 2;">加载中...</p>
+                </div>
+                <div class="card">
+                    <h4>⏱️ 时间统计</h4>
+                    <p id="route-stats" style="line-height: 2;">加载中...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 高频词汇 ========== -->
+        <div id="wordcloud" class="page">
+            <div class="page-header">
+                <h1 class="page-title">高频词汇分析</h1>
+                <p class="page-description">
+                    通过词云和热力图展示全书及各主要角色的高频词汇，对比前期和后期的词汇变化。
+                </p>
+            </div>
+
+            <div class="chart-container">
+                <div style="padding: 1rem;">
+                    <h3>全书高频词汇</h3>
+                </div>
+                <div id="wordcloud-all-chart" class="chart-wrapper"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>前期高频词（第1-30回）</h3>
+                    </div>
+                    <div id="wordcloud-early-chart" class="chart-wrapper"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>后期高频词（第71-100回）</h3>
+                    </div>
+                    <div id="wordcloud-late-chart" class="chart-wrapper"></div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>孙悟空专属词汇热力图</h3>
+                    </div>
+                    <div id="wordcloud-sunwukong-chart" class="chart-wrapper short"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>唐僧专属词汇热力图</h3>
+                    </div>
+                    <div id="wordcloud-tangmonk-chart" class="chart-wrapper short"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 评价分析 ========== -->
+        <div id="sentiment" class="page">
+            <div class="page-header">
+                <h1 class="page-title">读者评价人物分析</h1>
+                <p class="page-description">
+                    展示读者对西游记各人物的关键词评价和情感倾向。
+                </p>
+            </div>
+
+            <div class="chart-container">
+                <div style="padding: 1rem;">
+                    <h3>人物评价关键词云</h3>
+                </div>
+                <div id="sentiment-keywords-chart" class="chart-wrapper"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div style="padding: 1rem;">
+                        <h3>人物情感倾向</h3>
+                    </div>
+                    <div id="sentiment-distribution-chart" class="chart-wrapper short"></div>
+                </div>
+
+                <div class="card">
+                    <h4>📌 主要评价</h4>
+                    <ul style="padding-left: 1.5rem; line-height: 2;">
+                        <li><strong>孙悟空：</strong>聪慧、勇敢、顽皮</li>
+                        <li><strong>唐僧：</strong>心地善良、意志坚定</li>
+                        <li><strong>猪八戒：</strong>贪婪、幽默、人性化</li>
+                        <li><strong>沙和尚：</strong>忠诚、憨厚、尽职</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 底部 ========== -->
+    <footer>
+        <p>西游记数据可视化分析平台 © 2024 | 基于 ECharts 构建</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">数据来源：《西游记》原著 | 数据分析与可视化设计</p>
+    </footer>
+
+    <!-- ========== 脚本 ========== -->
+    <script src="src/js/main.js"></script>
+    <script src="src/js/pages/network.js"></script>
+    <script src="src/js/pages/character.js"></script>
+    <script src="src/js/pages/route.js"></script>
+    <script src="src/js/pages/wordcloud.js"></script>
+    <script src="src/js/pages/sentiment.js"></script>
+</body>
+
+</html>
