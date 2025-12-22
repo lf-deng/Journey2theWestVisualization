@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>章节对比 — 原文 / 白话</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            margin: 16px
+        }
+
+        header {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 12px
+        }
+
+        select {
+            font-size: 16px;
+            padding: 6px
+        }
+
+        .container {
+            display: flex;
+            gap: 12px
+        }
+
+        .col {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: #fff;
+            overflow: auto;
+            max-height: 80vh
+        }
+
+        .title {
+            font-weight: 700;
+            margin-bottom: 8px
+        }
+
+        .meta {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 8px
+        }
+
+        .btn-row {
+            margin-left: auto
+        }
+
+        button {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: #f6f6f6
+        }
+
+        pre {
+            white-space: pre-wrap;
+            font-family: inherit;
+            line-height: 1.6
+        }
+
+        @media (max-width:800px) {
+            .container {
+                flex-direction: column
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>章节对比阅读</h2>
+        <div class="btn-row">
+            <label for="chapterSelect">选择章节：</label>
+            <select id="chapterSelect"></select>
+            <button id="swapBtn">切换顺序</button>
+        </div>
+    </header>
+
+    <div class="meta">数据来源：src/data/西游记-白话文.json（包含原文与白话译文）</div>
+
+    <div class="container">
+        <div class="col" id="leftCol">
+            <div class="title" id="leftTitle">原文</div>
+            <pre id="leftText">加载中…</pre>
+        </div>
+        <div class="col" id="rightCol">
+            <div class="title" id="rightTitle">译文</div>
+            <pre id="rightText">加载中…</pre>
+        </div>
+    </div>
+
+    <script src="../js/pages/compare.js"></script>
+</body>
+
+</html>
