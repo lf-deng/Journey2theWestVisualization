@@ -261,6 +261,14 @@ async function ensureChinaMapRegistered() {
 }
 
 async function fetchChinaGeoJson() {
+    const localChinaMapURL = "src\\data\\china&india.json"
+    // 有本地资源直接返回
+    const localResponse = await fetch(localChinaMapURL);
+    if (localResponse.ok) {
+        console.log("成功加载本地地图数据");
+        return await localResponse.json();
+    }
+
     try {
         const response = await fetch('https://geo.datav.aliyun.com/areas_v3/bound/geojson?code=100000_full');
         if (!response.ok) {
