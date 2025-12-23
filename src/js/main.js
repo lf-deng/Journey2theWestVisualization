@@ -18,12 +18,26 @@ class PageManager {
     setupNavigation() {
         const navLinks = document.querySelectorAll('.nav-links a');
         navLinks.forEach(link => {
+            // Allow navigation links in cards to reuse this handler
+            link.classList.add('nav-link');
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const pageId = link.getAttribute('href').substring(1);
                 // Lazy-load the target page when the user clicks the nav item
                 this.loadPage(pageId);
             });
+        });
+
+        // Enable home cards to reuse the same navigation behaviour
+        const cardLinks = document.querySelectorAll('.card a[href^="#"]');
+        cardLinks.forEach(link => {
+            if (!link.classList.contains('nav-link')) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const pageId = link.getAttribute('href').substring(1);
+                    this.loadPage(pageId);
+                });
+            }
         });
     }
 
