@@ -45,8 +45,47 @@ function initSentimentKeywords() {
         { name: '机敏', value: 143 }
     ];
 
-    // 创建词云效果的气泡图
-    const option = {
+    const wordCloudOption = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{b}: {c}次'
+        },
+        series: [{
+            type: 'wordCloud',
+            shape: 'circle',
+            width: '100%',
+            height: '100%',
+            sizeRange: [24, 68],
+            rotationRange: [-45, 45],
+            rotationStep: 45,
+            gridSize: 8,
+            textStyle: {
+                fontWeight: 'bold',
+                color: function () {
+                    const colors = ['#667eea', '#f093fb', '#43e97b', '#4facfe'];
+                    return colors[Math.floor(Math.random() * colors.length)];
+                }
+            },
+            emphasis: {
+                textStyle: {
+                    textShadowBlur: 12,
+                    textShadowColor: '#333'
+                }
+            },
+            data: keywordsData
+        }]
+    };
+
+    try {
+        chart.setOption(wordCloudOption);
+    } catch (error) {
+        console.warn('WordCloud extension unavailable, fallback to bubble chart.', error);
+        chart.setOption(createSentimentBubbleFallback(keywordsData));
+    }
+}
+
+function createSentimentBubbleFallback(data) {
+    return {
         tooltip: {
             trigger: 'item',
             formatter: '{b}: {c}次'
@@ -54,10 +93,9 @@ function initSentimentKeywords() {
         series: [{
             type: 'scatter',
             symbolSize: function (val) {
-                // 对 mention 值开平方，平衡气泡大小差异
                 return Math.sqrt(val[2]) * 5;
             },
-            data: keywordsData.map((d, i) => [
+            data: data.map((d, i) => [
                 (i % 5) * 200 + Math.random() * 100,
                 Math.floor(i / 5) * 150 + Math.random() * 100,
                 d.value,
@@ -113,8 +151,6 @@ function initSentimentKeywords() {
             containLabel: false
         }
     };
-
-    chart.setOption(option);
 }
 
 function initSentimentDistribution() {

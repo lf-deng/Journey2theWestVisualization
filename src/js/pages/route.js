@@ -14,21 +14,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const ROUTE_DATA_URL = encodeURI('src/data/取经路线.json');
+
 async function initRouteChart() {
     const containerId = 'route-chart';
     const chart = window.chartManager.initChart(containerId);
 
-    // 样例数据：取经路线
-    const routeData = [
-        { name: '长安', coord: [114.21892734521, 36.6171245705068], value: 0, events: '唐僧出发' },
-        { name: '两界山', coord: [113.5, 36.8], value: 50, events: '孙悟空被救' },
-        { name: '高老庄', coord: [113.0, 37.0], value: 100, events: '猪八戒入队' },
-        { name: '黄风岭', coord: [112.5, 37.2], value: 150, events: '黄风怪难' },
-        { name: '流沙河', coord: [112.0, 37.5], value: 200, events: '沙和尚入队' },
-        { name: '火焰山', coord: [111.0, 38.0], value: 300, events: '铁扇公主阻挡' },
-        { name: '狮驼国', coord: [110.0, 38.5], value: 350, events: '三只狮子精' },
-        { name: '灵山', coord: [108.0, 39.0], value: 400, events: '成功取经' }
-    ];
+    const mapReady = await ensureChinaMapRegistered();
+    if (!mapReady) {
+        chart.setOption({
+            title: {
+                text: '地图加载失败，请稍后刷新重试',
+                left: 'center',
+                top: 'center',
+                textStyle: { color: '#fa709a', fontSize: 16 }
+            }
+        });
+        return;
+    }
+    const routeSource = await loadRouteData();
+    if (!routeSource) {
+        chart.setOption({
+            title: {
+                text: '路线数据加载失败，请检查网络或文件路径',
+                left: 'center',
+                top: 'center',
+                textStyle: { color: '#fa709a', fontSize: 16 }
+            }
+        });
+        return;
+    }
+
+    const { points, lines, meta } = transformRouteData(routeSource);
+    if (!points.length) {
+        chart.setOption({
+            title: {
+                text: '暂无可展示的取经路线数据',
+                left: 'center',
+                top: 'center',
+                textStyle: { color: '#fa709a', fontSize: 16 }
+            }
+        });
+        return;
+    }
 
     // 组合地理坐标叠加线图与散点，模拟取经路线巡游
     const option = {
@@ -46,12 +74,23 @@ async function initRouteChart() {
         tooltip: {
             trigger: 'item',
             formatter: function (params) {
-                if (params.componentSubType === 'scatter') {
-                    return `${params.name}<br/>进度: ${params.value}%<br/>事件: ${params.data.events}`;
-                } else if (params.componentSubType === 'line') {
-                    return '取经路线';
+                if (params.componentSubType === 'scatter' || params.componentSubType === 'effectScatter') {
+                    const data = params.data;
+                    const hardshipText = data.hardships && data.hardships.length
+                        ? data.hardships.map(h => `第${h.number}难：${h.description}`).join('<br>')
+                        : '暂无记录';
+                    return [
+                        `<strong>${params.name}</strong>`,
+                        `所属：${data.country}`,
+                        `进度：第${data.sequence}站 / 共${meta.totalLocations}站`,
+                        `劫难数：${data.hardshipCount}`,
+                        hardshipText
+                    ].join('<br>');
                 }
-                return '';
+                if (params.componentSubType === 'lines') {
+                    return params.data.tooltip || '取经路线';
+                }
+                return params.name || '';
             }
         },
         geo: {
@@ -77,7 +116,7 @@ async function initRouteChart() {
                 name: '取经路线',
                 type: 'lines',
                 coordinateSystem: 'geo',
-                data: generateRouteLines(routeData),
+                data: lines,
                 lineStyle: {
                     normal: {
                         color: '#667eea',
@@ -98,9 +137,10 @@ async function initRouteChart() {
                 name: '停留地点',
                 type: 'scatter',
                 coordinateSystem: 'geo',
-                data: routeData,
-                symbolSize: function (val) {
-                    return val[2] / 50;
+                data: points,
+                symbolSize: function (val, params) {
+                    const count = params.data.hardshipCount || 0;
+                    return Math.max(12, 6 + count * 2);
                 },
                 label: {
                     formatter: '{b}',
@@ -129,9 +169,10 @@ async function initRouteChart() {
                 name: '取经进度',
                 type: 'effectScatter',
                 coordinateSystem: 'geo',
-                data: routeData.sort((a, b) => a.value - b.value),
-                symbolSize: function (val) {
-                    return val[2] / 60;
+                data: points,
+                symbolSize: function (val, params) {
+                    const progress = params.data.progress || 0;
+                    return Math.max(12, progress / 8);
                 },
                 showEffectOn: 'render',
                 rippleEffect: {
@@ -157,30 +198,191 @@ async function initRouteChart() {
 
     chart.setOption(option);
 
-    // 更新统计信息
-    updateRouteStats(routeData);
+    updateRouteStats(meta, points);
 }
 
-function generateRouteLines(data) {
-    const lines = [];
-    for (let i = 0; i < data.length - 1; i++) {
-        // 将相邻地点的坐标拼成线路段
-        lines.push([
-            [data[i].coord[0], data[i].coord[1]],
-            [data[i + 1].coord[0], data[i + 1].coord[1]]
-        ]);
-    }
-    return lines;
-}
 
-function updateRouteStats(data) {
+
+function updateRouteStats(meta, points) {
     const infoDiv = document.getElementById('route-info');
     const statsDiv = document.getElementById('route-stats');
 
-    const locations = data.map(d => d.name).join(' → ');
-    const events = data.map(d => `${d.name}（${d.events}）`).join('<br>');
+    const countryLines = meta.countries.length
+        ? meta.countries
+            .map(country => `${country.name}（${country.locationCount}地，${country.hardshipCount}难）`)
+            .join('<br>')
+        : '暂无数据';
 
-    // 使用简单字符串拼接输出统计摘要
-    infoDiv.innerHTML = `<strong>主要停留地：</strong><br>${locations}`;
-    statsDiv.innerHTML = `<strong>总路线：</strong>${data.length}个地点<br><strong>估计耗时：</strong>14年`;
+    const milestoneText = points.length
+        ? points.slice(0, 5)
+            .map(point => {
+                const firstHardship = point.hardships && point.hardships.length ? point.hardships[0].description : '行程推进';
+                return `${point.sequence}. ${point.name} - ${firstHardship}`;
+            })
+            .join('<br>')
+        : '暂无节点';
+
+    infoDiv.innerHTML = [
+        `<strong>途经国家：</strong><br>${countryLines}`,
+        '<br>',
+        `<strong>行程节点速览：</strong><br>${milestoneText}`
+    ].join('');
+
+    statsDiv.innerHTML = [
+        `<strong>总难数：</strong>${meta.totalHardships}难`,
+        `<strong>停留地点：</strong>${meta.totalLocations}处`,
+        `<strong>途经国家：</strong>${meta.countryCount}个`,
+        `<strong>通关印章：</strong>${meta.passportSeals.length ? meta.passportSeals.join('、') : '暂无记录'}`
+    ].join('<br>');
+}
+
+let chinaMapLoader = null;
+let routeDataLoader = null;
+
+async function ensureChinaMapRegistered() {
+    if (echarts.getMap && echarts.getMap('china')) {
+        return true;
+    }
+
+    if (!chinaMapLoader) {
+        chinaMapLoader = fetchChinaGeoJson();
+    }
+
+    try {
+        const geoJson = await chinaMapLoader;
+        if (geoJson) {
+            echarts.registerMap('china', geoJson);
+            return true;
+        }
+    } catch (error) {
+        console.error('Failed to register China map:', error);
+    }
+    return false;
+}
+
+async function fetchChinaGeoJson() {
+    try {
+        const response = await fetch('https://geo.datav.aliyun.com/areas_v3/bound/geojson?code=100000_full');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('China geojson request failed:', error);
+        return null;
+    }
+}
+
+async function loadRouteData() {
+    if (!routeDataLoader) {
+        routeDataLoader = fetchRouteJson();
+    }
+    try {
+        return await routeDataLoader;
+    } catch (error) {
+        console.error('Route data request failed:', error);
+        return null;
+    }
+}
+
+async function fetchRouteJson() {
+    try {
+        const response = await fetch(ROUTE_DATA_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Route json fetch error:', error);
+        throw error;
+    }
+}
+
+function transformRouteData(raw) {
+    const data = raw && raw.journey_to_the_west ? raw.journey_to_the_west : null;
+    if (!data) {
+        return { points: [], lines: [], meta: { totalHardships: 0, totalLocations: 0, countryCount: 0, passportSeals: [], countries: [] } };
+    }
+
+    const points = [];
+    const lines = [];
+    let previousPoint = null;
+
+    const countriesMeta = [];
+    const declaredHardships = data.total_hardships || 0;
+    let maxHardshipNumber = 0;
+
+    (data.countries || []).forEach(country => {
+        const locations = country.locations || [];
+        let countryHardships = 0;
+        locations.forEach(location => {
+            const hardships = location.hardships || [];
+            countryHardships += hardships.length;
+
+            const sequence = points.length + 1;
+            const peakHardshipNumber = hardships.reduce((peak, hardship) => Math.max(peak, hardship.number || 0), maxHardshipNumber);
+            maxHardshipNumber = Math.max(maxHardshipNumber, peakHardshipNumber);
+
+            const point = {
+                name: location.name,
+                coord: [location.lng, location.lat],
+                hardships,
+                hardshipCount: hardships.length,
+                country: country.name,
+                sequence,
+                peakHardshipNumber
+            };
+
+            points.push(point);
+
+            if (previousPoint) {
+                lines.push({
+                    coords: [
+                        [previousPoint.coord[0], previousPoint.coord[1]],
+                        [point.coord[0], point.coord[1]]
+                    ],
+                    tooltip: `${previousPoint.name} → ${point.name}`
+                });
+            }
+            previousPoint = point;
+        });
+
+        countriesMeta.push({
+            name: country.name,
+            locationCount: locations.length,
+            hardshipCount: countryHardships
+        });
+    });
+
+    const totalLocations = points.length;
+    const totalHardships = declaredHardships || maxHardshipNumber || points.reduce((sum, point) => sum + point.hardshipCount, 0);
+
+    let trackedHardshipNumber = 0;
+    const enrichedPoints = points.map(point => {
+        trackedHardshipNumber = Math.max(trackedHardshipNumber, point.peakHardshipNumber);
+        const hardshipProgress = totalHardships ? Math.round(trackedHardshipNumber / totalHardships * 100) : 0;
+        const sequenceProgress = totalLocations ? Math.round(point.sequence / totalLocations * 100) : 0;
+        const progress = hardshipProgress || sequenceProgress;
+
+        return {
+            name: point.name,
+            value: [point.coord[0], point.coord[1], progress],
+            coord: point.coord,
+            hardships: point.hardships,
+            hardshipCount: point.hardshipCount,
+            country: point.country,
+            sequence: point.sequence,
+            progress
+        };
+    });
+
+    const meta = {
+        totalHardships,
+        totalLocations,
+        countryCount: countriesMeta.length,
+        passportSeals: data.passport_seals || [],
+        countries: countriesMeta
+    };
+
+    return { points: enrichedPoints, lines, meta };
 }

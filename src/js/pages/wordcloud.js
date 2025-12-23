@@ -90,13 +90,12 @@ function initWordCloudAll() {
         }]
     };
 
-    // 如果没有 WordCloud 组件，使用条形图代替
-    if (!echarts.wordCloud) {
-        // 在不引入扩展库的环境中保持页面可用
-        option = createBarChartOption('全书高频词', wordData.slice(0, 10));
+    try {
+        chart.setOption(option);
+    } catch (error) {
+        console.warn('WordCloud extension unavailable, fallback to bar chart.', error);
+        chart.setOption(createBarChartOption('全书高频词', wordData.slice(0, 10)));
     }
-
-    chart.setOption(option);
 }
 
 function initWordCloudEarly() {
