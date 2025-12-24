@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>西游记数据可视化分析平台</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts@5/map/js/china.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts-wordcloud@2/dist/echarts-wordcloud.min.js"></script>
@@ -148,8 +149,18 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h4>🔍 分析视角</h4>
-                    <p>通过饼图和柱状图展示不同人物特征的分布，帮助理解故事中的人物构成和发展脉络。</p>
+                    <h4 style="margin: 0 0 0.75rem 0; color: #333;">🔍 分析视角</h4>
+                    <p style="margin: 0.5rem 0; color: #666;">通过饼图和柱状图展示不同人物特征的分布，帮助理解故事中的人物构成和发展脉络。</p>
+                    <p style="margin: 0.5rem 0; color: #666;"><strong>主要发现：</strong></p>
+                    <ul style="margin: 0; padding-left: 1.2rem; color: #666;">
+                        <li>妖怪主要分为天庭下凡和本土成精两类</li>
+                        <li>妖怪结局与被神仙带回、被击杀和被收服三种</li>
+                        <li>神仙派系以佛教为主，道教神仙出场次数相对较少</li>
+                        <li>随着取经进程，佛教神仙出场频率逐渐增加</li>
+                    </ul>
+                    <p style="margin: 0.75rem 0 0 0; color: #666; font-size: 0.9rem; font-style: italic;">
+                        💡 提示：点击饼图扇区可以查看详细分析
+                    </p>
                 </div>
             </div>
         </div>

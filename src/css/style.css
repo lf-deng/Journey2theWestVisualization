@@ -321,3 +321,327 @@ footer {
     color: #f57c00;
     border-left: 4px solid #f57c00;
 }
+/* ========== 人物特征分析页面样式 ========== */
+
+#character .page-header {
+    padding: 2rem;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#character .page-title {
+    font-size: 2rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+#character .page-description {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 图表网格布局 */
+#character .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#character .chart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#character .chart-container:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+#character .chart-wrapper {
+    height: 400px;
+    padding: 0.5rem;
+}
+
+#character .chart-wrapper.short {
+    height: 400px;
+}
+
+/* 卡片样式 */
+#character .card {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 1.25rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#character .card:hover {
+    background: #f0f2f5;
+    border-left-color: #764ba2;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #character .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #character .page-header {
+        padding: 1.5rem;
+    }
+    
+    #character .page-title {
+        font-size: 1.75rem;
+    }
+    
+    #character .chart-wrapper {
+        height: 350px;
+    }
+    
+    #character .chart-wrapper.short {
+        height: 350px;
+    }
+}
+
+/* 图表标题样式 */
+#character .chart-container > div:first-child {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#character .chart-container h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* 打印样式 */
+@media print {
+    #character .chart-container {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* 确保图表容器有明确的尺寸 */
+#character .chart-wrapper {
+    height: 400px !important;
+    width: 100% !important;
+    min-height: 300px;
+}
+
+#character .chart-wrapper.short {
+    height: 400px !important;
+}
+
+/* 图表容器样式 */
+#character .chart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+/* 强制显示图表 */
+.echarts {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 修复饼图标签显示 */
+.echarts-pie-label {
+    font-size: 12px !important;
+}
+
+/* 详情卡片样式 */
+.detail-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* 添加到现有CSS中 - 修复图表显示问题 */
+
+/* 强制设置图表容器尺寸 */
+#character .chart-wrapper {
+    height: 400px !important;
+    width: 100% !important;
+    min-height: 300px;
+    position: relative !important;
+}
+
+/* 确保ECharts容器能正确获取尺寸 */
+.echarts {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* 修复图表容器 */
+#character .chart-container {
+    position: relative;
+    min-height: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+/* 详情卡片样式 */
+.detail-card {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: slideDown 0.3s ease-out;
+    display: none; /* 初始隐藏 */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 模态框遮罩 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #character .chart-wrapper {
+        height: 300px !important;
+    }
+    
+    .detail-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+}
+
+/* 防止图表容器被折叠 */
+#character .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#character .chart-wrapper.short {
+    height: 400px !important;
+}
+
+/* ========== 修复ECharts图表显示问题 ========== */
+
+/* 确保所有图表容器有明确的初始尺寸 */
+.echarts {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 强制给所有图表容器设置最小高度 */
+#demon-origin-chart,
+#demon-ending-chart,
+#deity-sect-chart,
+#sect-frequency-chart {
+    min-height: 400px !important;
+    height: 400px !important;
+}
+
+/* 覆盖ECharts默认的隐藏状态 */
+.echarts div[style*="width: 0px"],
+.echarts div[style*="height: 0px"] {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+#character.page.active {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    animation: ensure-chart-size 0.001s forwards;
+}
+
+
+/* 图表容器强制样式 */
+.chart-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.chart-wrapper.short {
+    height: 400px !important;
+}
+
+/* 强制ECharts渲染 */
+.echarts-instance {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* 页面激活时重新计算图表尺寸 */
+.page.active .echarts {
+    animation: resizeChart 0.1s forwards;
+}
+
+@keyframes resizeChart {
+    to {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
