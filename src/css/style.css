@@ -76,11 +76,13 @@ body {
     max-width: 1400px;
     margin: 2rem auto;
     padding: 0 2rem;
+    overflow: visible;
 }
 
 .page {
     display: none;
     animation: fadeIn 0.5s ease-in;
+    overflow: visible;
 }
 
 .page.active {
@@ -131,7 +133,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .chart-wrapper {
@@ -140,10 +142,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 .chart-wrapper.tall {
-    height: 800px;
+    height: 800px !important;
 }
 
 .chart-wrapper.short {
@@ -321,6 +324,7 @@ footer {
     color: #f57c00;
     border-left: 4px solid #f57c00;
 }
+
 /* ========== 人物特征分析页面样式 ========== */
 
 #character .page-header {
@@ -395,6 +399,7 @@ footer {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -406,26 +411,26 @@ footer {
     #character .charts-grid {
         grid-template-columns: 1fr;
     }
-    
+
     #character .page-header {
         padding: 1.5rem;
     }
-    
+
     #character .page-title {
         font-size: 1.75rem;
     }
-    
+
     #character .chart-wrapper {
         height: 350px;
     }
-    
+
     #character .chart-wrapper.short {
         height: 350px;
     }
 }
 
 /* 图表标题样式 */
-#character .chart-container > div:first-child {
+#character .chart-container>div:first-child {
     padding: 1rem;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -488,8 +493,15 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -532,7 +544,8 @@ footer {
     margin: 1rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     animation: slideDown 0.3s ease-out;
-    display: none; /* 初始隐藏 */
+    display: none;
+    /* 初始隐藏 */
 }
 
 @keyframes slideDown {
@@ -540,6 +553,7 @@ footer {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -565,7 +579,7 @@ footer {
     #character .chart-wrapper {
         height: 300px !important;
     }
-    
+
     .detail-card {
         padding: 1rem;
         margin: 0.5rem 0;
@@ -592,7 +606,11 @@ footer {
     height: 100% !important;
 }
 
-/* 强制给所有图表容器设置最小高度 */
+/* 强制给所有图表容器设置明确高度 */
+#route-chart {
+    height: 800px !important;
+}
+
 #demon-origin-chart,
 #demon-ending-chart,
 #deity-sect-chart,
@@ -621,7 +639,6 @@ footer {
 .chart-wrapper {
     position: relative !important;
     width: 100% !important;
-    height: 400px !important;
 }
 
 .chart-wrapper.short {

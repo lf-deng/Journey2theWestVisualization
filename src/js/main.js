@@ -66,8 +66,8 @@ class PageManager {
 
             // 重置所有图表
             setTimeout(() => {
-                if (window.echarts) {
-                    Object.values(window.charts || {}).forEach(chart => {
+                if (window.chartManager && window.chartManager.charts) {
+                    Object.values(window.chartManager.charts).forEach(chart => {
                         if (chart) {
                             try {
                                 chart.resize();
@@ -77,7 +77,7 @@ class PageManager {
                         }
                     });
                 }
-            }, 100);
+            }, 500);
         }
     }
 }

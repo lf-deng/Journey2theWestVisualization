@@ -60,7 +60,7 @@ async function initRouteChart() {
 
     // 组合地理坐标叠加线图与散点，模拟取经路线巡游
     const option = {
-        backgroundColor: '#fafafa',
+        backgroundColor: '#AAD3DF',
         title: {
             text: '唐僧师徒四人取经路线',
             top: 'top',
@@ -96,6 +96,11 @@ async function initRouteChart() {
         geo: {
             map: 'china',
             roam: true,
+            zoom: 1.5,
+            center: [105, 36],
+            layoutCenter: ['65%', '35%'],
+            layoutSize: '145%',
+
             label: {
                 emphasis: {
                     show: false
@@ -103,11 +108,11 @@ async function initRouteChart() {
             },
             itemStyle: {
                 normal: {
-                    areaColor: '#323c48',
-                    borderColor: '#404a59'
+                    areaColor: '#F7EDD1',
+                    borderColor: '#d4b896'
                 },
                 emphasis: {
-                    areaColor: '#2a333d'
+                    areaColor: '#BDDAB1'
                 }
             }
         },
@@ -119,13 +124,13 @@ async function initRouteChart() {
                 data: lines,
                 lineStyle: {
                     normal: {
-                        color: '#667eea',
-                        width: 3,
+                        color: '#d35400', // 深橙色/赭石色，更有古道感
+                        width: 2,
                         curveness: 0.2,
-                        opacity: 0.8
+                        opacity: 0.6
                     },
                     emphasis: {
-                        width: 5,
+                        width: 4,
                         opacity: 1
                     }
                 },
@@ -149,11 +154,11 @@ async function initRouteChart() {
                 },
                 itemStyle: {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                        { offset: 0, color: '#667eea' },
-                        { offset: 1, color: '#764ba2' }
+                        { offset: 0, color: '#e74c3c' }, // 硃砂红
+                        { offset: 1, color: '#c0392b' }
                     ]),
                     shadowBlur: 10,
-                    shadowColor: 'rgba(102, 126, 234, 0.5)'
+                    shadowColor: 'rgba(192, 57, 43, 0.4)'
                 },
                 emphasis: {
                     label: {
@@ -187,9 +192,9 @@ async function initRouteChart() {
                     show: false
                 },
                 itemStyle: {
-                    color: '#43e97b',
+                    color: '#f1c40f', // 金色波纹
                     shadowBlur: 10,
-                    shadowColor: 'rgba(67, 233, 123, 0.5)'
+                    shadowColor: 'rgba(241, 196, 15, 0.5)'
                 },
                 zlevel: 1
             }
@@ -197,6 +202,11 @@ async function initRouteChart() {
     };
 
     chart.setOption(option);
+
+    // 强制在渲染后进行一次 resize，确保地图布局正确
+    setTimeout(() => {
+        chart.resize();
+    }, 200);
 
     updateRouteStats(meta, points);
 }
@@ -224,11 +234,12 @@ function updateRouteStats(meta, points) {
 
     infoDiv.innerHTML = [
         `<strong>途经国家：</strong><br>${countryLines}`,
-        '<br>',
-        `<strong>行程节点速览：</strong><br>${milestoneText}`
+
     ].join('');
 
     statsDiv.innerHTML = [
+        `<strong>行程节点速览：</strong><br>${milestoneText}`,
+        '<br>',
         `<strong>总难数：</strong>${meta.totalHardships}难`,
         `<strong>停留地点：</strong>${meta.totalLocations}处`,
         `<strong>途经国家：</strong>${meta.countryCount}个`,
@@ -261,7 +272,7 @@ async function ensureChinaMapRegistered() {
 }
 
 async function fetchChinaGeoJson() {
-    const localChinaMapURL = "src\\data\\china&india.json"
+    const localChinaMapURL = "src/data/china&india.json"
     // 有本地资源直接返回
     const localResponse = await fetch(localChinaMapURL);
     if (localResponse.ok) {
