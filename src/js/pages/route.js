@@ -46,6 +46,7 @@ async function initRouteChart() {
     }
 
     const { points, lines, meta } = transformRouteData(routeSource);
+    console.log(points)
     if (!points.length) {
         chart.setOption({
             title: {
@@ -76,11 +77,13 @@ async function initRouteChart() {
             formatter: function (params) {
                 if (params.componentSubType === 'scatter' || params.componentSubType === 'effectScatter') {
                     const data = params.data;
+                    // console.log("params", data);
                     const hardshipText = data.hardships && data.hardships.length
                         ? data.hardships.map(h => `第${h.number}难：${h.description}`).join('<br>')
                         : '暂无记录';
                     return [
                         `<strong>${params.name}</strong>`,
+                        `${data.description || ''}`,
                         `所属：${data.country}`,
                         `进度：第${data.sequence}站 / 共${meta.totalLocations}站`,
                         `劫难数：${data.hardshipCount}`,
@@ -98,7 +101,7 @@ async function initRouteChart() {
             roam: true,
             zoom: 1.5,
             center: [105, 36],
-            layoutCenter: ['65%', '35%'],
+            layoutCenter: ['75%', '45%'],
             layoutSize: '145%',
 
             label: {
@@ -121,22 +124,27 @@ async function initRouteChart() {
                 name: '取经路线',
                 type: 'lines',
                 coordinateSystem: 'geo',
-                data: lines,
+                zlevel: 1,
+                effect: {
+                    show: true,
+                    period: 4,
+                    trailLength: 0.5,
+                    color: '#f1c40f', // 金色光点，象征佛光或取经之路
+                    symbolSize: 5
+                },
                 lineStyle: {
                     normal: {
                         color: '#d35400', // 深橙色/赭石色，更有古道感
-                        width: 2,
-                        curveness: 0.2,
-                        opacity: 0.6
+                        width: 3.34,
+                        curveness: 0.0168, // 改为直线
+                        opacity: 0.5
                     },
                     emphasis: {
-                        width: 4,
+                        width: 3,
                         opacity: 1
                     }
                 },
-                smooth: true,
-                symbolSize: 15,
-                hoverAnimation: true
+                data: lines
             },
             {
                 name: '停留地点',
@@ -319,9 +327,12 @@ async function fetchRouteJson() {
 
 function transformRouteData(raw) {
     const data = raw && raw.journey_to_the_west ? raw.journey_to_the_west : null;
+
     if (!data) {
         return { points: [], lines: [], meta: { totalHardships: 0, totalLocations: 0, countryCount: 0, passportSeals: [], countries: [] } };
     }
+
+    // console.log(data);
 
     const points = [];
     const lines = [];
@@ -333,8 +344,11 @@ function transformRouteData(raw) {
 
     (data.countries || []).forEach(country => {
         const locations = country.locations || [];
+
         let countryHardships = 0;
         locations.forEach(location => {
+            // console.log(location)
+            const location_description = location.description || '';
             const hardships = location.hardships || [];
             countryHardships += hardships.length;
 
@@ -345,12 +359,15 @@ function transformRouteData(raw) {
             const point = {
                 name: location.name,
                 coord: [location.lng, location.lat],
+                description: location_description,
                 hardships,
                 hardshipCount: hardships.length,
                 country: country.name,
                 sequence,
                 peakHardshipNumber
             };
+
+            // console.log("point", point)
 
             points.push(point);
 
@@ -387,6 +404,7 @@ function transformRouteData(raw) {
             name: point.name,
             value: [point.coord[0], point.coord[1], progress],
             coord: point.coord,
+            description: point.description,
             hardships: point.hardships,
             hardshipCount: point.hardshipCount,
             country: point.country,
