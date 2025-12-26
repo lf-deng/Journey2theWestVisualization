@@ -870,7 +870,7 @@
         const dataCard = domCache.characterPage?.querySelector('.card:first-of-type');
         if (dataCard) {
             dataCard.innerHTML = `
-                <h4 style="margin: 0 0 1rem 0; color: #333;">📊 数据统计</h4>
+                <h4 style="margin: 0 0 1rem 0; color: #333;">📊 特征概览</h4>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1rem;">
                     <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
                         <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">妖怪总数</div>
