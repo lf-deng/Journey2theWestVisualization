@@ -25,28 +25,29 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
+    /* 简化背景，移除复杂的 SVG 图案以提升渲染性能 */
     background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
-    background-image:
-        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-        linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
     z-index: -1;
+    pointer-events: none;
+    contain: paint;
+    will-change: transform;
     transform: translateZ(0);
-    /* 开启硬件加速 */
 }
 
 /* ============================================
    导航栏样式
    ============================================ */
 .navbar {
-    background: rgba(26, 42, 108, 0.7);
-    /* 使用深色调背景（取自背景色之一）并增加不透明度 */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(26, 42, 108, 0.85);
+    /* 增加不透明度以减少对模糊的依赖 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 0.8rem 0;
+    will-change: transform;
     transform: translateZ(0);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     /* 添加阴影以增强与下方白色内容的区分度 */
@@ -85,7 +86,7 @@ body::before {
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
     font-size: 0.95rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     /* 添加文字阴影，确保在白色背景上清晰可见 */
@@ -554,11 +555,12 @@ body::before {
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* 优化 transition，避免使用 all */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background 0.3s ease;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    /* 移除 backdrop-filter 以提升性能 */
 }
 
 .home-grid .card {
@@ -1064,11 +1066,10 @@ footer {
 .hero-card {
     border-radius: 18px;
     padding: 2rem;
-    background: radial-gradient(1200px 600px at 20% -10%, rgba(180, 140, 60, .18), transparent 55%),
-        radial-gradient(900px 500px at 110% 10%, rgba(0, 0, 0, .06), transparent 60%),
-        linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(252, 250, 245, .92));
-    border: 1px solid rgba(180, 140, 60, .35);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    /* 简化渐变以提升性能 */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(252, 250, 245, 0.95));
+    border: 1px solid rgba(180, 140, 60, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
 }
