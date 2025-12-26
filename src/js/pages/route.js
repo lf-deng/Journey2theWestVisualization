@@ -290,17 +290,36 @@ function updateRouteStats(meta, points) {
 
         return `
             <details class="tree-country">
-                <summary><strong>${c.name}</strong> <small>(${c.locationCount}地, ${c.hardshipCount}难)</small></summary>
+                <summary>
+                    <span class="country-name">${c.name}</span>
+                    <span class="country-stats">${c.locationCount}地, ${c.hardshipCount}难</span>
+                </summary>
                 <ul class="tree-location-list">${locationsHtml}</ul>
             </details>
         `;
     }).join('');
 
     infoDiv.innerHTML = `
-        <div class="route-tree-container">
+        <div class="route-tree-container" id="route-tree-scroll-container">
             ${treeHtml}
         </div>
     `;
+
+    // 修复滚动捕获问题：确保鼠标在容器内时，滚轮事件被容器优先处理
+    const scrollContainer = document.getElementById('route-tree-scroll-container');
+    if (scrollContainer) {
+        scrollContainer.addEventListener('wheel', (e) => {
+            const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
+            const isScrollable = scrollHeight > clientHeight;
+
+            if (isScrollable) {
+                // 阻止事件冒泡，防止触发页面滚动
+                e.stopPropagation();
+            }
+        }, { passive: true });
+    }
+
+    // 
 
     // 填充中间的总结栏
     if (summaryDiv) {
@@ -560,6 +579,8 @@ function transformRouteData(raw) {
         const sequenceProgress = totalLocations ? Math.round(point.sequence / totalLocations * 100) : 0;
         const progress = hardshipProgress || sequenceProgress;
 
+
+
         return {
             name: point.name,
             value: [point.coord[0], point.coord[1], progress],
@@ -576,11 +597,14 @@ function transformRouteData(raw) {
 
     const meta = {
         totalHardships,
-        totalLocations,
-        countryCount: countriesMeta.length,
+        totalLocations: totalLocations - 2,
+        countryCount: countriesMeta.length - 2,
         passportSeals: data.passport_seals || [],
-        countries: countriesMeta
+        countries: countriesMeta.slice(0, - 2)
     };
+
+
+
 
     return { points: enrichedPoints, lines: enrichedLines, meta };
 }

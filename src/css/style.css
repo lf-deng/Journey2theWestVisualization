@@ -140,11 +140,15 @@ body::before {
    ============================================ */
 .route-tree-container {
     max-height: 600px;
+    /* 使用 max-height 并配合 overflow-y */
     overflow-y: auto;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    scrollbar-width: thin;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tree-country {
@@ -152,12 +156,13 @@ body::before {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-left: 4px solid #667eea;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    margin-bottom: 12px;
+    overflow: visible;
+    transition: box-shadow 0.3s ease;
 }
 
-.tree-country[open] {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.tree-country:last-child {
+    margin-bottom: 0;
 }
 
 .tree-country summary {
@@ -166,22 +171,31 @@ body::before {
     background: white;
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-weight: bold;
     color: #2d3748;
+    user-select: none;
+}
+
+.country-name {
+    flex: 1;
+    font-weight: 700;
+}
+
+.country-stats {
+    font-size: 0.85rem;
+    color: #718096;
+    font-weight: 500;
+    margin-right: 15px;
+    min-width: 80px;
+    text-align: right;
 }
 
 .tree-country summary::-webkit-details-marker {
     display: none;
 }
 
-.tree-country summary {
-    display: flex;
-}
-
-.tree-country summary::marker,
-.tree-country summary::-webkit-details-marker {
+.tree-country summary::marker {
     display: none;
     content: "";
 }
@@ -200,14 +214,12 @@ body::before {
     list-style: none;
     padding: 0 15px 15px 15px;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: block;
 }
 
 .tree-location {
     border-top: 1px solid #edf2f7;
-    padding-top: 8px;
+    padding: 8px 0;
 }
 
 .tree-location summary {
@@ -216,10 +228,26 @@ body::before {
     padding: 6px 0;
     font-weight: 600;
     background: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.tree-location summary::-webkit-details-marker {
+    display: none;
 }
 
 .tree-location summary::after {
+    content: '▾';
     font-size: 0.8rem;
+    transition: transform 0.3s;
+    color: #cbd5e0;
+}
+
+.tree-location[open] summary::after {
+    transform: rotate(180deg);
 }
 
 .tree-content {
@@ -293,7 +321,9 @@ body::before {
 .milestone-name {
     font-weight: 700;
     color: #2d3748;
-    min-width: 110px;
+    width: 150px;
+    /* 使用固定宽度确保对齐 */
+    flex-shrink: 0;
     font-size: 0.95rem;
 }
 
@@ -301,6 +331,8 @@ body::before {
     font-size: 0.85rem;
     color: #718096;
     line-height: 1.4;
+    flex: 1;
+    /* 占据剩余空间 */
 }
 
 /* 中间总结栏样式 */
