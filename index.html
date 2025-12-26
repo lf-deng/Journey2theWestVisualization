@@ -258,19 +258,187 @@
             <div class="charts-grid">
                 <div class="chart-container">
                     <div style="padding: 1rem;">
-                        <h3>人物情感倾向</h3>
+                        <h3>评论类型分布</h3>
                     </div>
-                    <div id="sentiment-distribution-chart" class="chart-wrapper short"></div>
+                    <div id="review-type-chart" class="chart-wrapper short"></div>
                 </div>
 
-                <div class="card">
+                <div class="card hero-card" id="main-review-card">
+
+                  <div class="card-head">
+
                     <h4>📌 主要评价</h4>
-                    <ul style="padding-left: 1.5rem; line-height: 2;">
-                        <li><strong>孙悟空：</strong>聪慧、勇敢、顽皮</li>
-                        <li><strong>唐僧：</strong>心地善良、意志坚定</li>
-                        <li><strong>猪八戒：</strong>贪婪、幽默、人性化</li>
-                        <li><strong>沙和尚：</strong>忠诚、憨厚、尽职</li>
-                    </ul>
+
+                    <div class="hint">点击人物展开；点击关键词可筛选</div>
+
+                  </div>
+
+
+
+                  <!-- 筛选条 -->
+
+                  <div class="filter-bar" id="tagBar">
+
+                    <span class="filter-label">关键词：</span>
+
+                    <button class="tag is-active" data-tag="all">全部</button>
+
+                    <button class="tag" data-tag="聪慧">聪慧</button>
+
+                    <button class="tag" data-tag="勇敢">勇敢</button>
+
+                    <button class="tag" data-tag="顽皮">顽皮</button>
+
+                    <button class="tag" data-tag="善良">善良</button>
+
+                    <button class="tag" data-tag="坚定">坚定</button>
+
+                    <button class="tag" data-tag="幽默">幽默</button>
+
+                    <button class="tag" data-tag="人性化">人性化</button>
+
+                    <button class="tag" data-tag="忠诚">忠诚</button>
+
+                    <button class="tag" data-tag="憨厚">憨厚</button>
+
+                    <button class="tag" data-tag="尽职">尽职</button>
+
+                    <button class="tag" data-tag="贪婪">贪婪</button>
+
+                  </div>
+
+
+
+                  <!-- 人物卡片列表 -->
+
+                  <div class="role-grid" id="roleGrid">
+
+                    <details class="role" data-tags="聪慧 勇敢 顽皮" open>
+
+                      <summary>
+
+                        <span class="role-name">孙悟空</span>
+
+                        <span class="role-sub">齐天大圣</span>
+
+                        <span class="chev">▾</span>
+
+                      </summary>
+
+                      <div class="role-body">
+
+                        <div class="chips">
+
+                          <span class="chip">聪慧</span>
+
+                          <span class="chip">勇敢</span>
+
+                          <span class="chip">顽皮</span>
+
+                        </div>
+
+                        <p class="role-desc">读者往往把他视为"反叛与自由意志"的象征，评价集中在机智、行动力与戏谑感。</p>
+
+                      </div>
+
+                    </details>
+
+
+
+                    <details class="role" data-tags="善良 坚定">
+
+                      <summary>
+
+                        <span class="role-name">唐僧</span>
+
+                        <span class="role-sub">取经主心骨</span>
+
+                        <span class="chev">▾</span>
+
+                      </summary>
+
+                      <div class="role-body">
+
+                        <div class="chips">
+
+                          <span class="chip">心地善良</span>
+
+                          <span class="chip">意志坚定</span>
+
+                        </div>
+
+                        <p class="role-desc">评价常呈"两极"：一方面赞其信念与慈悲，另一方面也会质疑其理想主义与不够机变。</p>
+
+                      </div>
+
+                    </details>
+
+
+
+                    <details class="role" data-tags="贪婪 幽默 人性化">
+
+                      <summary>
+
+                        <span class="role-name">猪八戒</span>
+
+                        <span class="role-sub">人间烟火气</span>
+
+                        <span class="chev">▾</span>
+
+                      </summary>
+
+                      <div class="role-body">
+
+                        <div class="chips">
+
+                          <span class="chip">贪婪</span>
+
+                          <span class="chip">幽默</span>
+
+                          <span class="chip">人性化</span>
+
+                        </div>
+
+                        <p class="role-desc">读者往往在他身上看到"真实欲望"，所以评价既有调侃也有共情。</p>
+
+                      </div>
+
+                    </details>
+
+
+
+                    <details class="role" data-tags="忠诚 憨厚 尽职">
+
+                      <summary>
+
+                        <span class="role-name">沙和尚</span>
+
+                        <span class="role-sub">情绪稳定</span>
+
+                        <span class="chev">▾</span>
+
+                      </summary>
+
+                      <div class="role-body">
+
+                        <div class="chips">
+
+                          <span class="chip">忠诚</span>
+
+                          <span class="chip">憨厚</span>
+
+                          <span class="chip">尽职</span>
+
+                        </div>
+
+                        <p class="role-desc">评论中他常被描述为"可靠但存在感弱"，属于团队的承托角色。</p>
+
+                      </div>
+
+                    </details>
+
+                  </div>
+
                 </div>
             </div>
         </div>
