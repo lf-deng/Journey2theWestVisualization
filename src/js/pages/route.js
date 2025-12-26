@@ -434,7 +434,7 @@ async function ensureChinaMapRegistered() {
 }
 
 async function fetchChinaGeoJson() {
-    const localChinaMapURL = "src/data/china&india.json"
+    const localChinaMapURL = "src/data/取经地图.json"
     // 有本地资源直接返回
     const localResponse = await fetch(localChinaMapURL);
     if (localResponse.ok) {
