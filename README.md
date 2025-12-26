@@ -1,100 +1,98 @@
-# 西游记数据可视化分析平台
+# 🐒 《西游记》文本数据可视化分析平台
 
-一个基于《西游记》叙事数据的前端可视化项目，聚合人物关系、角色特征、取经路线、词频分析与读者情感。所有图表由 ECharts 5.x 渲染，可在现代浏览器中直接运行。
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![ECharts](https://img.shields.io/badge/ECharts-5.x-red.svg)](https://echarts.apache.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 
-## 功能总览
+这是一个基于《西游记》叙事数据的前端可视化项目。通过自然语言处理（NLP）与大语言模型（LLM）技术对原著文本进行深度挖掘，从人物关系、角色特征、地理路径、词频演变及情感倾向等多个维度，探索中国古典名著的数字化呈现方式。
 
-- 人物关系网络：Force 布局展示主角、神仙、妖怪之间的关系强度与出场频次。
-- 人物特征分析：三个图表对比妖怪来历/结局与道佛派系出场趋势。
-- 取经路线：基于中国地图的路线、停留点与劫难统计，含波纹动画。
-- 高频词汇：词云与柱状图分析全书、阶段、角色词频，提供词云降级方案。
-- 读者评价分析：关键词云及情感饼图呈现四大主角评价倾向。
-- 章节对比阅读：原文与白话对照阅读工具（独立页面 compare.html）。
+## 🌟 核心功能
 
-## 页面与核心脚本
+- **🕸️ 人物关系网络**：利用 Force 布局展示主角、神仙、妖怪之间的社交网络，节点大小代表出场频次，连线粗细反映关联强度。
+- **🔍 角色属性特征**：多维度对比妖怪的来历（野怪 vs 有背景）、结局（被杀 vs 被收服）以及道佛派系的出场趋势。
+- **🗺️ 取经路线空间可视化**：基于中国地图还原唐僧师徒的地理行迹，动态展示九九八十一难的空间分布与劫难统计。
+- **☁️ 文本高频词汇分析**：结合词云图与动态条形图，分析全书及不同阶段的核心词汇演变。
+- **💬 读者情感评价**：整合文本评论数据，通过词云与情感饼图呈现读者对四大主角的评价倾向。
+- **📖 章节对比阅读**：提供原文与白话文的实时对照阅读工具，支持章节快速切换。
 
-- 首页：index.html 定义导航、卡片入口以及页面容器；页面切换由 src/js/main.js 的 PageManager 管理。
-- 人物关系网络：src/js/pages/network.js 构建交互式图谱并展示统计摘要。
-- 人物特征分析：src/js/pages/character.js 渲染三个静态示例图表，可替换为真实统计。
-- 取经路线：src/js/pages/route.js 加载 src/data/取经路线.json，动态注册中国地图并生成线路/散点/effectScatter 组合。
-- 高频词汇：src/js/pages/wordcloud.js 结合词云与条形图，内部含词云扩展不可用时的降级逻辑。
-- 读者评价：src/js/pages/sentiment.js 提供词云和情感饼图，并在缺少词云扩展时切换到散点气泡。
-- 章节对比：src/pages/compare.html + src/js/pages/compare.js 读取《西游记-白话文》数据，支持章节选择与原译切换。
+## 🛠️ 技术栈
 
-## 数据与资源
+- **前端渲染**：[Apache ECharts 5.x](https://echarts.apache.org/) (核心引擎), [echarts-wordcloud](https://github.com/ecomfe/echarts-wordcloud) (词云扩展)
+- **核心架构**：原生 JavaScript (ES6+), CSS3 (Grid & Flexbox), HTML5
+- **数据处理**：Python, OpenAI API (用于白话文翻译与文本清洗), Jupyter Notebook
+- **地图数据**：GeoJSON (中国与西域地理数据)
 
-- 静态数据：src/data/ 目录存放多版本原文、白话译文、路线数据、地图 GeoJSON、停用词表等。
-- 地图资源：优先加载 src/data/china&india.json，如失败回退到阿里云 GeoJSON。
-- LLM 处理脚本：src/data/llm_text_processing.py 将原文按段调用 OpenAI 兼容 API 生成白话译文；通过 .env（示例）配置 base_url、模型与密钥。
-- 示例资源：echart_demo/ 为早期参考 demo 与 Les Miserables 图谱脚本。
+## 📂 项目结构
 
-## 快速开始
-
-1. 安装依赖：项目仅依赖浏览器与远程 ECharts CDN，无需额外构建步骤。
-2. 启动静态服务器：推荐 VS Code Live Server，或运行 `python -m http.server 8000`，再访问 `http://localhost:8000/index.html`。
-3. 若需 compare 页面，在同一服务器下访问 `http://localhost:8000/src/pages/compare.html`。
-
-> 注意：词云图依赖 echarts-wordcloud 扩展，index.html 已通过 CDN 引入。
-
-## 项目结构
-
-```
+```text
 Journey2theWestVisualization/
-├── index.html
-├── README.md
-├── DEVELOPMENT.md
-├── fetch_txt.ipynb
-├── echart_demo/
-│   ├── graph.html
-│   └── Les Miserables.js
+├── index.html                # 项目主入口
 ├── src/
-│   ├── css/
-│   │   └── style.css
 │   ├── js/
-│   │   ├── main.js
-│   │   └── pages/
-│   │       ├── character.js
-│   │       ├── compare.js
-│   │       ├── network.js
-│   │       ├── route.js
-│   │       ├── sentiment.js
-│   │       └── wordcloud.js
-│   ├── pages/
-│   │   └── compare.html
-│   ├── components/
-│   └── data/
-│       ├── .env
-│       ├── china&india.json
-│       ├── chinamap.json
-│       ├── journey-data.json
-│       ├── llm_text_processing.py
-│       ├── stopwords_cn.txt
-│       ├── worldmap.json
-│       ├── 取经路线.json
-│       ├── 国学梦-西游记白话版.json
-│       ├── 国学梦.csv
-│       ├── 汉程网-西游记白话版.json
-│       ├── 汉程网.csv
-│       ├── 西游记-原文.json
-│       ├── 西游记-白话文.json
-│       └── 西游记.txt
-└── .git/
+│   │   ├── main.js           # 页面管理与图表初始化核心逻辑
+│   │   └── pages/            # 各功能模块独立脚本
+│   │       ├── network.js    # 人物关系图谱
+│   │       ├── route.js      # 取经路线地图
+│   │       └── ...           # 其他模块
+│   ├── css/
+│   │   └── style.css         # 全局样式与响应式设计
+│   ├── data/                 # 核心数据集（JSON, CSV, TXT）
+│   │   ├── llm_text_processing.py # LLM 数据处理脚本
+│   │   └── ...
+│   └── pages/
+│       └── compare.html      # 章节对比阅读页面
+└── echart_demo/              # 早期原型与参考 Demo
+
 ```
 
-## 自定义与二次开发
+## 🚀 快速开始
 
-- 更换配色：修改 src/css/style.css 中的渐变色与卡片样式；或在各图表 option 中调整 itemStyle。
-- 替换数据：使用 Utils.loadJSON（src/js/main.js）加载新的 JSON 文件，然后更新对应 series 数据。
-- 新增页面：在 index.html 添加页面占位，并在 src/js/pages 中创建相应脚本，最后在导航栏引入链接。
-- 响应式优化：style.css 已提供基础断点，可按需求调整 grid 与 chart wrapper 高度。
+### 1. 环境准备
+本项目为纯前端应用，仅需一个静态文件服务器即可运行。
 
-## 数据处理工作流
+### 2. 启动项目
+推荐使用 VS Code 的 **Live Server** 扩展，或在终端运行以下命令：
 
-1. 将原文 JSON 放入 src/data/（示例：西游记-原文.json）。
-2. 配置 src/data/.env 或环境变量（OPENAI_BASE_URL、OPENAI_MODEL、OPENAI_API_KEY）。
-3. 在有 Python 与 openai-sdk 的环境中运行 `python llm_text_processing.py` 生成 西游记-白话文.json。
-4. 在 compare 页面或可视化脚本中加载新生成的译文数据。
+```bash
+# 使用 Python 启动
+python -m http.server 8000
 
-## 许可证与致谢
+# 或使用 Node.js 启动
+npx http-server -p 8000
+```
 
-本项目仅用于课程学习与演示，数据来源于公开网络资源。《西游记》原著版权归原作者及出版社所有，感谢 Apache ECharts 团队提供的可视化框架。
+访问 `http://localhost:8000/index.html` 即可进入平台。
+
+### 3. 数据处理（可选）
+若需重新生成白话文数据，请配置 [src/data/.env](src/data/.env) 中的 API 密钥，并运行：
+```bash
+cd src/data
+python llm_text_processing.py
+```
+
+## 📊 数据处理工作流
+
+1. **文本提取**：从原始文本中提取章节内容。
+2. **LLM 翻译**：调用大模型（如 Qwen, GPT）将古文段落转换为现代白话文。
+3. **特征提取**：通过 NLP 脚本统计人物共现、词频及情感关键词。
+4. **格式转换**：将处理后的数据转换为 ECharts 可识别的 JSON 格式。
+
+## 📝 开发指南
+
+有关架构设计、事件系统及如何新增图表的详细信息，请参阅 [DEVELOPMENT.md](DEVELOPMENT.md)。
+
+## 🤝 贡献与致谢
+
+- **开发团队**：华东师范大学研究生数据可视化课程 - 文本可视化小组
+- **数据来源**：公开网络资源及《西游记》原著。
+- **可视化框架**：感谢 [Apache ECharts](https://echarts.apache.org/) 团队。
+- **项目初衷**：本项目仅用于数据可视化课程学习与演示。
+
+## 📄 许可证
+
+本项目采用 [MIT License](LICENSE) 许可。
+
+---
+*🐒 踏平坎坷成大道，斗罢艰险又出发。*
+
