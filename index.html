@@ -84,7 +84,7 @@
             <div class="page-header">
                 <h1 class="page-title">人物关系网络分析</h1>
                 <p class="page-description">
-                    通过对文本中人物共现频率的计算，构建《西游记》核心人物关系图谱。节点大小代表人物在文本中的提及频次，连线粗细反映人物间的关联强度。
+                    展示西游记中主要人物之间的关系网络。节点代表人物，边代表人物之间的联系。节点大小表示人物在网络中的重要性（关系数量与强度），颜色代表人物类型。
                 </p>
             </div>
 
@@ -95,11 +95,20 @@
             <div class="charts-grid dual" style="grid-template-columns: 1fr 1fr;">
                 <div class="card">
                     <h4>📋 图表说明</h4>
-                    <ul style="padding-left: 1.5rem;">
-                        <li>节点大小：代表人物出场频率</li>
-                        <li>节点颜色：不同颜色代表不同类型的人物</li>
-                        <li>连接线：表示两个人物之间的相关性</li>
-                        <li>交互功能：支持拖拽和缩放</li>
+                    <ul style="padding-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>节点大小</strong>：代表人物在网络中的重要性（由关系数量与强度决定）</li>
+                        <li><strong>节点颜色</strong>：不同颜色代表不同类型的人物（主角、神仙、妖怪等）</li>
+                        <li><strong>连接线</strong>：表示两个人物之间的关系，线宽表示关系强度</li>
+                        <li><strong>交互功能</strong>：
+                            <ul style="padding-left: 1.5rem; margin-top: 0.5rem;">
+                                <li>拖拽：可拖动调整位置</li>
+                                <li>缩放：鼠标滚轮缩放视图</li>
+                                <li>点击：点击节点高亮显示其相邻节点</li>
+                                <li>双击：双击节点选择（最多两个），查看关系详情</li>
+                                <li>搜索：使用搜索框快速定位人物</li>
+                                <li>视图切换：切换"全部人物"或"主要人物"视图</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="card">
