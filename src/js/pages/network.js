@@ -461,13 +461,13 @@ function updateChart(chart, data, filterMode) {
             // 力引导布局配置 (关键修改)
             force: {
                 // 斥力：范围值，根据节点大小自动计算斥力
-                repulsion: [100, 800], 
+                repulsion: [150, 1200], 
                 // 边长：范围值
-                edgeLength: [50, 200],
+                edgeLength: [80, 300],
                 // 摩擦力：0.6 比较平衡，太小会乱动，太大不动
                 friction: 0.6,
                 // 引力：让节点聚拢
-                gravity: 0.1,
+                gravity: 0.08,
                 // 布局动画：设为 true 才有物理效果
                 layoutAnimation: true
             },
