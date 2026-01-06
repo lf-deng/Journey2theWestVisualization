@@ -4,37 +4,37 @@
       "id": "万圣公主",
       "name": "万圣公主",
       "category": "其他",
-      "value": 7
+      "value": 5
     },
     {
       "id": "万圣龙王",
       "name": "万圣龙王",
       "category": "神仙",
-      "value": 4
+      "value": 3
     },
     {
       "id": "三摩地",
       "name": "三摩地",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "三昧",
       "name": "三昧",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "三清道祖",
       "name": "三清道祖",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "东华帝君",
       "name": "东华帝君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "东来佛祖笑和尚",
@@ -46,25 +46,25 @@
       "id": "东海龙王",
       "name": "东海龙王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "东王公",
       "name": "东王公",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "乌巢禪师",
       "name": "乌巢禪师",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "九天应元雷声普化天尊",
       "name": "九天应元雷声普化天尊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "九头狮子",
@@ -76,7 +76,7 @@
       "id": "九头虫",
       "name": "九头虫",
       "category": "其他",
-      "value": 5
+      "value": 4
     },
     {
       "id": "九尾狐狸",
@@ -88,31 +88,31 @@
       "id": "九尾狐狸精",
       "name": "九尾狐狸精",
       "category": "妖怪",
-      "value": 6
+      "value": 3
     },
     {
       "id": "九曜星",
       "name": "九曜星",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "九灵元圣",
       "name": "九灵元圣",
       "category": "其他",
-      "value": 9
+      "value": 8
     },
     {
       "id": "九灵元圣及徒子徒孙",
       "name": "九灵元圣及徒子徒孙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "二十八星宿",
       "name": "二十八星宿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "二十四路诸天",
@@ -124,91 +124,91 @@
       "id": "二郎神",
       "name": "二郎神",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "云程万里鹏",
       "name": "云程万里鹏",
       "category": "其他",
-      "value": 8
+      "value": 6
     },
     {
       "id": "五官王",
       "name": "五官王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "五方五老",
       "name": "五方五老",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "井宿",
       "name": "井宿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "井木犴",
       "name": "井木犴",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "亢金龙",
       "name": "亢金龙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "伽叶",
       "name": "伽叶",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "伽蓝",
       "name": "伽蓝",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "佈雾郎君",
       "name": "佈雾郎君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "佛老",
       "name": "佛老",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "值年神李丙",
       "name": "值年神李丙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "值日神周登",
       "name": "值日神周登",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "值时神刘洪",
       "name": "值时神刘洪",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "值月神黄承乙",
       "name": "值月神黄承乙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "假乌鸡国国王",
@@ -226,79 +226,79 @@
       "id": "元始天尊",
       "name": "元始天尊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "六耳猕猴",
       "name": "六耳猕猴",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "凌空子",
       "name": "凌空子",
       "category": "其他",
-      "value": 10
+      "value": 5
     },
     {
       "id": "凌虚子",
       "name": "凌虚子",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "刘弘基",
       "name": "刘弘基",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "力士",
       "name": "力士",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "劲节十八公",
       "name": "劲节十八公",
       "category": "其他",
-      "value": 10
+      "value": 5
     },
     {
       "id": "北海龙王",
       "name": "北海龙王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "十二元辰",
       "name": "十二元辰",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "十八罗汉",
       "name": "十八罗汉",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "十殿阎王",
       "name": "十殿阎王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "十洲三岛仙翁",
       "name": "十洲三岛仙翁",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "千里眼",
       "name": "千里眼",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "南山大王",
@@ -316,31 +316,31 @@
       "id": "南极观音",
       "name": "南极观音",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "南海龙王",
       "name": "南海龙王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "卞城王",
       "name": "卞城王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "危月燕",
       "name": "危月燕",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "卵二姐",
       "name": "卵二姐",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "卷帘大将",
@@ -352,7 +352,7 @@
       "id": "参水猿",
       "name": "参水猿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "后羿",
@@ -364,19 +364,16 @@
       "id": "哪吒",
       "name": "哪吒",
       "category": "其他",
-      "value": 6
-    },
-    {
-      "id": "唐三藏",
-      "name": "唐三藏",
-      "category": "主角",
-      "value": 1
+      "value": 5
     },
     {
       "id": "唐僧",
       "name": "唐僧",
       "category": "主角",
-      "value": 31
+      "value": 17,
+      "aliases": [
+        "唐三藏"
+      ]
     },
     {
       "id": "唐太宗",
@@ -388,91 +385,91 @@
       "id": "善财童子",
       "name": "善财童子",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "四大金刚",
       "name": "四大金刚",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "土地神",
       "name": "土地神",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "土德星君",
       "name": "土德星君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "地涌夫人",
       "name": "地涌夫人",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "地藏王菩萨",
       "name": "地藏王菩萨",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "城隍",
       "name": "城隍",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "增长天王",
       "name": "增长天王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "壁水貐",
       "name": "壁水貐",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "多闻天王",
       "name": "多闻天王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "夜游神",
       "name": "夜游神",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "大力鬼王",
       "name": "大力鬼王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "大势至菩萨",
       "name": "大势至菩萨",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "大白龟",
       "name": "大白龟",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "大迦叶",
       "name": "大迦叶",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "大鹏金翅雕",
@@ -484,67 +481,70 @@
       "id": "大鹏金翅鸟",
       "name": "大鹏金翅鸟",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天佑元帅",
       "name": "天佑元帅",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天权",
       "name": "天权",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天枢",
       "name": "天枢",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天璇",
       "name": "天璇",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天璣",
       "name": "天璣",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天皇大帝",
       "name": "天皇大帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "天竺国公主",
       "name": "天竺国公主",
       "category": "其他",
-      "value": 3
+      "value": 2
     },
     {
       "id": "天竺国国王",
       "name": "天竺国国王",
       "category": "其他",
-      "value": 3
+      "value": 2
     },
     {
-      "id": "天蓬元帅",
-      "name": "天蓬元帅",
-      "category": "其他",
-      "value": 1
+      "id": "猪八戒",
+      "name": "猪八戒",
+      "category": "主角",
+      "value": 8,
+      "aliases": [
+        "天蓬元帅"
+      ]
     },
     {
       "id": "太上老君",
       "name": "太上老君",
       "category": "神仙",
-      "value": 11
+      "value": 7
     },
     {
       "id": "太乙救苦天尊",
@@ -556,13 +556,13 @@
       "id": "太白金星",
       "name": "太白金星",
       "category": "神仙",
-      "value": 2
+      "value": 1
     },
     {
       "id": "太阳星君",
       "name": "太阳星君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "太阴星君",
@@ -574,31 +574,31 @@
       "id": "奎宿",
       "name": "奎宿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "奎木狼",
       "name": "奎木狼",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "女儿国国王",
       "name": "女儿国国王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "女土蝠",
       "name": "女土蝠",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "如意真仙",
       "name": "如意真仙",
       "category": "其他",
-      "value": 4
+      "value": 2
     },
     {
       "id": "如来",
@@ -616,7 +616,7 @@
       "id": "娄金狗",
       "name": "娄金狗",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "嫦娥",
@@ -628,37 +628,37 @@
       "id": "孔雀明王",
       "name": "孔雀明王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "孙悟空",
       "name": "孙悟空",
       "category": "主角",
-      "value": 34
+      "value": 16
     },
     {
       "id": "孤直公",
       "name": "孤直公",
       "category": "其他",
-      "value": 10
+      "value": 5
     },
     {
       "id": "守山大神",
       "name": "守山大神",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "宋帝王",
       "name": "宋帝王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "室火猪",
       "name": "室火猪",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "宼栋",
@@ -670,7 +670,7 @@
       "id": "寅将军",
       "name": "寅将军",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "寇梁",
@@ -688,31 +688,34 @@
       "id": "尉迟恭",
       "name": "尉迟恭",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
-      "id": "小白龙",
-      "name": "小白龙",
+      "id": "白龙马",
+      "name": "白龙马",
       "category": "主角",
-      "value": 9
+      "value": 8,
+      "aliases": [
+        "小白龙"
+      ]
     },
     {
       "id": "尾火虎",
       "name": "尾火虎",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "山神",
       "name": "山神",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "崔珏",
       "name": "崔珏",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "巨灵神",
@@ -724,37 +727,37 @@
       "id": "巨门",
       "name": "巨门",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "平等王",
       "name": "平等王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "广目天王",
       "name": "广目天王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "廉贞",
       "name": "廉贞",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "开阳",
       "name": "开阳",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "张公谨",
       "name": "张公谨",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "张士衡",
@@ -766,7 +769,7 @@
       "id": "张月鹿",
       "name": "张月鹿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "张道源",
@@ -778,25 +781,25 @@
       "id": "张道陵",
       "name": "张道陵",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "弥勒佛",
       "name": "弥勒佛",
       "category": "神仙",
-      "value": 3
+      "value": 2
     },
     {
       "id": "弥勒菩萨",
       "name": "弥勒菩萨",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "弼马温",
       "name": "弼马温",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "徐世绩",
@@ -808,7 +811,7 @@
       "id": "徐懋功",
       "name": "徐懋功",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "徐茂公",
@@ -820,13 +823,13 @@
       "id": "心月狐",
       "name": "心月狐",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "房日兔",
       "name": "房日兔",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "房玄龄",
@@ -838,31 +841,31 @@
       "id": "托塔天王",
       "name": "托塔天王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "托塔天王李靖",
       "name": "托塔天王李靖",
       "category": "神仙",
-      "value": 9
+      "value": 8
     },
     {
       "id": "抹蜡精",
       "name": "抹蜡精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "拂云叟",
       "name": "拂云叟",
       "category": "其他",
-      "value": 10
+      "value": 5
     },
     {
       "id": "持国天王",
       "name": "持国天王",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "捧珠龙女",
@@ -874,13 +877,13 @@
       "id": "推云童子",
       "name": "推云童子",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "摇光",
       "name": "摇光",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "敖摩昂",
@@ -904,7 +907,7 @@
       "id": "文曲",
       "name": "文曲",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "文殊菩萨",
@@ -916,43 +919,43 @@
       "id": "斑衣鳜婆",
       "name": "斑衣鳜婆",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "斗宿",
       "name": "斗宿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "斗木獬",
       "name": "斗木獬",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "日游神",
       "name": "日游神",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "星日马",
       "name": "星日马",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "昴日星官",
       "name": "昴日星官",
       "category": "神仙",
-      "value": 4
+      "value": 2
     },
     {
       "id": "昴日鸡",
       "name": "昴日鸡",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "普贤菩萨",
@@ -970,25 +973,25 @@
       "id": "木德星君",
       "name": "木德星君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "朱紫国国王",
       "name": "朱紫国国王",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "朱雀",
       "name": "朱雀",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "李世勣",
       "name": "李世勣",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "李世民",
@@ -1012,7 +1015,7 @@
       "id": "李淳风",
       "name": "李淳风",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "李渊",
@@ -1030,13 +1033,13 @@
       "id": "李靖",
       "name": "李靖",
       "category": "其他",
-      "value": 4
+      "value": 3
     },
     {
       "id": "杏仙",
       "name": "杏仙",
       "category": "其他",
-      "value": 13
+      "value": 8
     },
     {
       "id": "杜如晦",
@@ -1048,25 +1051,25 @@
       "id": "杨戩",
       "name": "杨戩",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "柳土獐",
       "name": "柳土獐",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "树精",
       "name": "树精",
       "category": "妖怪",
-      "value": 1
+      "value": 0
     },
     {
       "id": "楚江王",
       "name": "楚江王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "正元龙",
@@ -1078,7 +1081,7 @@
       "id": "武曲",
       "name": "武曲",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "段志贤",
@@ -1096,49 +1099,41 @@
       "id": "殷温娇",
       "name": "殷温娇",
       "category": "其他",
-      "value": 3
+      "value": 2
     },
     {
       "id": "毕月乌",
       "name": "毕月乌",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "毗蓝婆菩萨",
       "name": "毗蓝婆菩萨",
       "category": "神仙",
-      "value": 5
+      "value": 2
     },
     {
       "id": "氐土貉",
       "name": "氐土貉",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "水德星君",
       "name": "水德星君",
       "category": "其他",
-      "value": 1
-    },
-    {
-      "id": "沙僧",
-      "name": "沙僧",
-      "category": "主角",
-      "value": 8
+      "value": 0
     },
     {
       "id": "沙和尚",
       "name": "沙和尚",
       "category": "主角",
-      "value": 9
-    },
-    {
-      "id": "沙悟净",
-      "name": "沙悟净",
-      "category": "主角",
-      "value": 1
+      "value": 6,
+      "aliases": [
+        "沙僧",
+        "沙悟净"
+      ]
     },
     {
       "id": "法明和尚",
@@ -1150,7 +1145,7 @@
       "id": "泰山王",
       "name": "泰山王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "泾河龙王",
@@ -1162,19 +1157,19 @@
       "id": "混世魔王",
       "name": "混世魔王",
       "category": "妖怪",
-      "value": 1
+      "value": 0
     },
     {
       "id": "火德星君",
       "name": "火德星君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "灭法国国王",
       "name": "灭法国国王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "灵吉菩萨",
@@ -1186,19 +1181,19 @@
       "id": "灵宝天尊",
       "name": "灵宝天尊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "灵感大王",
       "name": "灵感大王",
       "category": "妖怪",
-      "value": 5
+      "value": 3
     },
     {
       "id": "熊山军",
       "name": "熊山军",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "熊罴怪",
@@ -1210,31 +1205,31 @@
       "id": "燃灯古佛",
       "name": "燃灯古佛",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "牛蜢精",
       "name": "牛蜢精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "牛金牛",
       "name": "牛金牛",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "牛魔王",
       "name": "牛魔王",
       "category": "妖怪",
-      "value": 24
+      "value": 11
     },
     {
       "id": "特处士",
       "name": "特处士",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "狐阿七",
@@ -1246,25 +1241,25 @@
       "id": "狐阿七大王",
       "name": "狐阿七大王",
       "category": "妖怪",
-      "value": 6
+      "value": 3
     },
     {
       "id": "独角兕大王",
       "name": "独角兕大王",
       "category": "妖怪",
-      "value": 2
+      "value": 1
     },
     {
       "id": "狮狔王",
       "name": "狮狔王",
       "category": "其他",
-      "value": 11
+      "value": 6
     },
     {
       "id": "狮猁怪",
       "name": "狮猁怪",
       "category": "妖怪",
-      "value": 1
+      "value": 0
     },
     {
       "id": "狮驼岭妖怪",
@@ -1282,37 +1277,31 @@
       "id": "狻猊",
       "name": "狻猊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "猕猴王",
       "name": "猕猴王",
       "category": "其他",
-      "value": 12
-    },
-    {
-      "id": "猪八戒",
-      "name": "猪八戒",
-      "category": "主角",
-      "value": 21
+      "value": 6
     },
     {
       "id": "玄奘",
       "name": "玄奘",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "玄武",
       "name": "玄武",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "玉兔",
       "name": "玉兔",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "玉兔精",
@@ -1324,25 +1313,25 @@
       "id": "玉帝",
       "name": "玉帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "玉皇大帝",
       "name": "玉皇大帝",
       "category": "神仙",
-      "value": 11
+      "value": 9
     },
     {
       "id": "玉衡",
       "name": "玉衡",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "玉面公主",
       "name": "玉面公主",
       "category": "其他",
-      "value": 4
+      "value": 2
     },
     {
       "id": "王珪",
@@ -1354,25 +1343,25 @@
       "id": "班毛精",
       "name": "班毛精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "电母",
       "name": "电母",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "白虎",
       "name": "白虎",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "白衣秀士",
       "name": "白衣秀士",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "白象",
@@ -1384,19 +1373,19 @@
       "id": "白面狐狸精",
       "name": "白面狐狸精",
       "category": "妖怪",
-      "value": 3
+      "value": 2
     },
     {
       "id": "白骨精",
       "name": "白骨精",
       "category": "妖怪",
-      "value": 1
+      "value": 0
     },
     {
       "id": "白鹿怪",
       "name": "白鹿怪",
       "category": "妖怪",
-      "value": 4
+      "value": 3
     },
     {
       "id": "白鹿精",
@@ -1405,16 +1394,10 @@
       "value": 1
     },
     {
-      "id": "白龙马",
-      "name": "白龙马",
-      "category": "主角",
-      "value": 12
-    },
-    {
       "id": "百眼魔君",
       "name": "百眼魔君",
       "category": "妖怪",
-      "value": 11
+      "value": 9
     },
     {
       "id": "百花羞",
@@ -1426,25 +1409,25 @@
       "id": "真武大帝",
       "name": "真武大帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "破军",
       "name": "破军",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "禄存",
       "name": "禄存",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "福禄寿",
       "name": "福禄寿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "禺狨王",
@@ -1456,7 +1439,7 @@
       "id": "秦广王",
       "name": "秦广王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "秦琼",
@@ -1474,25 +1457,25 @@
       "id": "箕水豹",
       "name": "箕水豹",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "紫微大帝",
       "name": "紫微大帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "红孩儿",
       "name": "红孩儿",
       "category": "其他",
-      "value": 8
+      "value": 4
     },
     {
       "id": "罗汉",
       "name": "罗汉",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "羊力大仙",
@@ -1504,19 +1487,19 @@
       "id": "翼火蛇",
       "name": "翼火蛇",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "胃土雉",
       "name": "胃土雉",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "菩提祖师",
       "name": "菩提祖师",
       "category": "神仙",
-      "value": 2
+      "value": 1
     },
     {
       "id": "菩提老祖",
@@ -1528,7 +1511,7 @@
       "id": "菩萨",
       "name": "菩萨",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "萧瑀",
@@ -1540,13 +1523,13 @@
       "id": "葛洪",
       "name": "葛洪",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "薛仁贵",
       "name": "薛仁贵",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "虎先锋",
@@ -1564,7 +1547,7 @@
       "id": "虚日鼠",
       "name": "虚日鼠",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "虞世南",
@@ -1576,31 +1559,31 @@
       "id": "蚂蜂精",
       "name": "蚂蜂精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "蛟魔王",
       "name": "蛟魔王",
       "category": "妖怪",
-      "value": 12
+      "value": 6
     },
     {
       "id": "蜘蛛精",
       "name": "蜘蛛精",
       "category": "妖怪",
-      "value": 16
+      "value": 8
     },
     {
       "id": "蜜蜂精",
       "name": "蜜蜂精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "蜻蜓精",
       "name": "蜻蜓精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "蝎子精",
@@ -1612,13 +1595,13 @@
       "id": "蟒蛇精",
       "name": "蟒蛇精",
       "category": "妖怪",
-      "value": 1
+      "value": 0
     },
     {
       "id": "蠦蜂精",
       "name": "蠦蜂精",
       "category": "妖怪",
-      "value": 15
+      "value": 8
     },
     {
       "id": "袁天罡",
@@ -1636,13 +1619,13 @@
       "id": "西梁女国太师",
       "name": "西梁女国太师",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "西梁女国女王",
       "name": "西梁女国女王",
       "category": "其他",
-      "value": 5
+      "value": 3
     },
     {
       "id": "西海龙女",
@@ -1660,7 +1643,7 @@
       "id": "西海龙王",
       "name": "西海龙王",
       "category": "神仙",
-      "value": 3
+      "value": 2
     },
     {
       "id": "西海龙王太子",
@@ -1672,37 +1655,37 @@
       "id": "西牛贺洲",
       "name": "西牛贺洲",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "西王母",
       "name": "西王母",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "观音菩萨",
       "name": "观音菩萨",
       "category": "神仙",
-      "value": 18
+      "value": 15
     },
     {
       "id": "角宿",
       "name": "角宿",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "角木蛟",
       "name": "角木蛟",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "觜火猴",
       "name": "觜火猴",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "许敬宗",
@@ -1714,13 +1697,13 @@
       "id": "许逊",
       "name": "许逊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "贪狼",
       "name": "贪狼",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "赛太岁",
@@ -1732,67 +1715,67 @@
       "id": "赤脚大仙",
       "name": "赤脚大仙",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "赤身鬼使",
       "name": "赤身鬼使",
       "category": "其他",
-      "value": 10
+      "value": 5
     },
     {
       "id": "軫水蚓",
       "name": "軫水蚓",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "转轮王",
       "name": "转轮王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "辟寒大王",
       "name": "辟寒大王",
       "category": "妖怪",
-      "value": 4
+      "value": 2
     },
     {
       "id": "辟尘大王",
       "name": "辟尘大王",
       "category": "妖怪",
-      "value": 4
+      "value": 2
     },
     {
       "id": "辟暑大王",
       "name": "辟暑大王",
       "category": "妖怪",
-      "value": 4
+      "value": 2
     },
     {
       "id": "迎阳驿驿丞",
       "name": "迎阳驿驿丞",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "邱弘济",
       "name": "邱弘济",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "都市王",
       "name": "都市王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "释迦牟尼佛",
       "name": "释迦牟尼佛",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "金吒",
@@ -1804,13 +1787,13 @@
       "id": "金圣娘娘",
       "name": "金圣娘娘",
       "category": "其他",
-      "value": 3
+      "value": 2
     },
     {
       "id": "金德星君",
       "name": "金德星君",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "金毛犼",
@@ -1840,25 +1823,25 @@
       "id": "金角大王",
       "name": "金角大王",
       "category": "妖怪",
-      "value": 12
+      "value": 8
     },
     {
       "id": "金鼻白毛老鼠精",
       "name": "金鼻白毛老鼠精",
       "category": "妖怪",
-      "value": 4
+      "value": 3
     },
     {
       "id": "钦差大臣",
       "name": "钦差大臣",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "铁扇公主",
       "name": "铁扇公主",
       "category": "其他",
-      "value": 5
+      "value": 2
     },
     {
       "id": "银角",
@@ -1870,73 +1853,73 @@
       "id": "银角大王",
       "name": "银角大王",
       "category": "妖怪",
-      "value": 12
+      "value": 8
     },
     {
       "id": "镇元大仙",
       "name": "镇元大仙",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "镇元子",
       "name": "镇元子",
       "category": "其他",
-      "value": 4
+      "value": 3
     },
     {
       "id": "长生大帝",
       "name": "长生大帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "阎罗王",
       "name": "阎罗王",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "阿难",
       "name": "阿难",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "陈光蕊",
       "name": "陈光蕊",
       "category": "其他",
-      "value": 2
+      "value": 1
     },
     {
       "id": "雨师",
       "name": "雨师",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "雷公",
       "name": "雷公",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "青华大帝",
       "name": "青华大帝",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "青毛狮子",
       "name": "青毛狮子",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "青毛狮子怪",
       "name": "青毛狮子怪",
       "category": "妖怪",
-      "value": 5
+      "value": 3
     },
     {
       "id": "青狮",
@@ -1948,37 +1931,37 @@
       "id": "青龙",
       "name": "青龙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "顺风耳",
       "name": "顺风耳",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "须菩提",
       "name": "须菩提",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "须菩提祖师",
       "name": "须菩提祖师",
       "category": "神仙",
-      "value": 1
+      "value": 0
     },
     {
       "id": "风伯",
       "name": "风伯",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "驪山老母",
       "name": "驪山老母",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "马三宝",
@@ -1990,13 +1973,13 @@
       "id": "骊山老母",
       "name": "骊山老母",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "高士廉",
       "name": "高士廉",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "高太公",
@@ -2014,7 +1997,7 @@
       "id": "高翠兰",
       "name": "高翠兰",
       "category": "其他",
-      "value": 5
+      "value": 4
     },
     {
       "id": "高香兰",
@@ -2026,7 +2009,7 @@
       "id": "鬼金羊",
       "name": "鬼金羊",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "魏征",
@@ -2038,13 +2021,13 @@
       "id": "魏徵",
       "name": "魏徵",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "鹏魔王",
       "name": "鹏魔王",
       "category": "妖怪",
-      "value": 12
+      "value": 6
     },
     {
       "id": "鹿力大仙",
@@ -2062,19 +2045,19 @@
       "id": "黄牙老象",
       "name": "黄牙老象",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "黄牙老象怪",
       "name": "黄牙老象怪",
       "category": "妖怪",
-      "value": 7
+      "value": 5
     },
     {
       "id": "黄狮精",
       "name": "黄狮精",
       "category": "妖怪",
-      "value": 11
+      "value": 10
     },
     {
       "id": "黄眉大王",
@@ -2086,7 +2069,7 @@
       "id": "黄眉老佛",
       "name": "黄眉老佛",
       "category": "神仙",
-      "value": 2
+      "value": 1
     },
     {
       "id": "黄眉道童",
@@ -2116,7 +2099,7 @@
       "id": "鼉龙",
       "name": "鼉龙",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "鼍龙怪",
@@ -2128,13 +2111,13 @@
       "id": "龟蛇二将",
       "name": "龟蛇二将",
       "category": "其他",
-      "value": 1
+      "value": 0
     },
     {
       "id": "𤟹狨王",
       "name": "𤟹狨王",
       "category": "其他",
-      "value": 11
+      "value": 6
     },
     {
       "id": "奔波儿灞",
@@ -2493,56 +2476,56 @@
   ],
   "links": [
     {
-      "source": "金蝉子",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "金蝉子",
       "value": 1,
       "relation": "前世"
     },
     {
-      "source": "孙悟空",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "孙悟空",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "猪八戒",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "猪八戒",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "沙僧",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "沙和尚",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "白龙马",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "白龙马",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "陈光蕊",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "陈光蕊",
       "value": 1,
       "relation": "父亲"
     },
     {
-      "source": "殷温娇",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "殷温娇",
       "value": 1,
       "relation": "母亲"
     },
     {
-      "source": "法明和尚",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "法明和尚",
       "value": 1,
       "relation": "师父"
     },
     {
-      "source": "李世民",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "李世民",
       "value": 1,
       "relation": "义兄"
     },
@@ -2553,110 +2536,92 @@
       "relation": "父亲"
     },
     {
-      "source": "唐僧",
-      "target": "孙悟空",
+      "source": "孙悟空",
+      "target": "菩提老祖",
       "value": 1,
       "relation": "师傅"
-    },
-    {
-      "source": "菩提老祖",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师傅"
-    },
-    {
-      "source": "猪八戒",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师弟"
-    },
-    {
-      "source": "沙僧",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师弟"
-    },
-    {
-      "source": "白龙马",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师弟"
-    },
-    {
-      "source": "镇元子",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "牛魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "蛟魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "狮驼王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "猕猴王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
-    },
-    {
-      "source": "禺狨王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "义兄"
     },
     {
       "source": "孙悟空",
       "target": "猪八戒",
       "value": 1,
-      "relation": "师兄"
+      "relation": "师弟"
     },
     {
-      "source": "沙僧",
+      "source": "孙悟空",
+      "target": "沙和尚",
+      "value": 1,
+      "relation": "师弟"
+    },
+    {
+      "source": "孙悟空",
+      "target": "白龙马",
+      "value": 1,
+      "relation": "师弟"
+    },
+    {
+      "source": "孙悟空",
+      "target": "镇元子",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "牛魔王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "蛟魔王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "鹏魔王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "狮驼王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "猕猴王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "孙悟空",
+      "target": "禺狨王",
+      "value": 1,
+      "relation": "义兄"
+    },
+    {
+      "source": "沙和尚",
       "target": "猪八戒",
       "value": 1,
       "relation": "师弟"
     },
     {
-      "source": "白龙马",
-      "target": "猪八戒",
+      "source": "猪八戒",
+      "target": "白龙马",
       "value": 1,
       "relation": "师弟"
     },
     {
-      "source": "唐僧",
-      "target": "猪八戒",
-      "value": 1,
-      "relation": "师傅"
-    },
-    {
-      "source": "天蓬元帅",
+      "source": "猪八戒",
       "target": "猪八戒",
       "value": 1,
       "relation": "前世"
     },
     {
-      "source": "猪八戒",
-      "target": "卵二姐",
+      "source": "卵二姐",
+      "target": "猪八戒",
       "value": 1,
       "relation": "夫"
     },
@@ -2667,38 +2632,26 @@
       "relation": "夫"
     },
     {
-      "source": "孙悟空",
-      "target": "沙僧",
-      "value": 1,
-      "relation": "师兄"
-    },
-    {
-      "source": "白龙马",
-      "target": "沙僧",
+      "source": "沙和尚",
+      "target": "白龙马",
       "value": 1,
       "relation": "师弟"
     },
     {
-      "source": "唐僧",
-      "target": "沙僧",
-      "value": 1,
-      "relation": "师傅"
-    },
-    {
       "source": "卷帘大将",
-      "target": "沙僧",
+      "target": "沙和尚",
       "value": 1,
       "relation": "前世"
     },
     {
-      "source": "西海龙王",
-      "target": "白龙马",
+      "source": "白龙马",
+      "target": "西海龙王",
       "value": 1,
       "relation": "父亲"
     },
     {
-      "source": "西海龙母",
-      "target": "白龙马",
+      "source": "白龙马",
+      "target": "西海龙母",
       "value": 1,
       "relation": "母亲"
     },
@@ -2709,68 +2662,44 @@
       "relation": "兄"
     },
     {
-      "source": "西海龙女",
-      "target": "白龙马",
+      "source": "白龙马",
+      "target": "西海龙女",
       "value": 1,
       "relation": "妹妹"
     },
     {
-      "source": "唐僧",
-      "target": "白龙马",
-      "value": 1,
-      "relation": "师傅"
-    },
-    {
-      "source": "孙悟空",
-      "target": "白龙马",
-      "value": 1,
-      "relation": "师兄"
-    },
-    {
-      "source": "沙僧",
-      "target": "白龙马",
-      "value": 1,
-      "relation": "师兄"
-    },
-    {
-      "source": "猪八戒",
-      "target": "白龙马",
-      "value": 1,
-      "relation": "师兄"
-    },
-    {
-      "source": "李渊",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "李渊",
       "value": 1,
       "relation": "父亲"
     },
     {
-      "source": "李建成",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "李建成",
       "value": 1,
       "relation": "兄"
     },
     {
-      "source": "李元吉",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "李元吉",
       "value": 1,
       "relation": "弟"
     },
     {
-      "source": "王珪",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "王珪",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "秦琼",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "秦琼",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "萧瑀",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "萧瑀",
       "value": 1,
       "relation": "臣"
     },
@@ -2781,14 +2710,14 @@
       "relation": "臣"
     },
     {
-      "source": "魏征",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "魏征",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "李玉英",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "李玉英",
       "value": 1,
       "relation": "妹"
     },
@@ -2799,8 +2728,8 @@
       "relation": "臣"
     },
     {
-      "source": "杜如晦",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "杜如晦",
       "value": 1,
       "relation": "臣"
     },
@@ -2817,32 +2746,32 @@
       "relation": "臣"
     },
     {
-      "source": "许敬宗",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "许敬宗",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "马三宝",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "马三宝",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "段志贤",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "段志贤",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "程咬金",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "程咬金",
       "value": 1,
       "relation": "臣"
     },
     {
-      "source": "虞世南",
-      "target": "李世民",
+      "source": "李世民",
+      "target": "虞世南",
       "value": 1,
       "relation": "臣"
     },
@@ -2865,8 +2794,8 @@
       "relation": "父"
     },
     {
-      "source": "高香兰",
-      "target": "高翠兰",
+      "source": "高翠兰",
+      "target": "高香兰",
       "value": 1,
       "relation": "姐姐"
     },
@@ -2877,38 +2806,38 @@
       "relation": "姐姐"
     },
     {
-      "source": "高香兰",
-      "target": "高玉兰",
+      "source": "高玉兰",
+      "target": "高香兰",
       "value": 1,
       "relation": "姐姐"
     },
     {
-      "source": "寇洪",
-      "target": "寇梁",
+      "source": "寇梁",
+      "target": "寇洪",
       "value": 1,
       "relation": "父"
     },
     {
-      "source": "寇梁",
-      "target": "宼栋",
+      "source": "宼栋",
+      "target": "寇梁",
       "value": 1,
       "relation": "兄"
     },
     {
-      "source": "袁守诚",
-      "target": "袁天罡",
+      "source": "袁天罡",
+      "target": "袁守诚",
       "value": 1,
       "relation": "叔"
     },
     {
-      "source": "李靖",
-      "target": "木吒",
+      "source": "木吒",
+      "target": "李靖",
       "value": 1,
       "relation": "父"
     },
     {
-      "source": "李靖",
-      "target": "哪吒",
+      "source": "哪吒",
+      "target": "李靖",
       "value": 1,
       "relation": "父"
     },
@@ -2955,50 +2884,50 @@
       "relation": "徒弟"
     },
     {
-      "source": "金吒",
-      "target": "如来",
+      "source": "如来",
+      "target": "金吒",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "红孩儿",
-      "target": "牛魔王",
+      "source": "牛魔王",
+      "target": "红孩儿",
       "value": 1,
       "relation": "儿"
     },
     {
-      "source": "黑风怪",
-      "target": "观音菩萨",
+      "source": "观音菩萨",
+      "target": "黑风怪",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "黄风怪",
-      "target": "灵吉菩萨",
+      "source": "灵吉菩萨",
+      "target": "黄风怪",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "黄毛貂鼠",
-      "target": "灵吉菩萨",
+      "source": "灵吉菩萨",
+      "target": "黄毛貂鼠",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "金角",
-      "target": "太上老君",
+      "source": "太上老君",
+      "target": "金角",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "银角",
-      "target": "太上老君",
+      "source": "太上老君",
+      "target": "银角",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "铁扇公主",
-      "target": "牛魔王",
+      "source": "牛魔王",
+      "target": "铁扇公主",
       "value": 1,
       "relation": "妻"
     },
@@ -3027,8 +2956,8 @@
       "relation": "舅"
     },
     {
-      "source": "鼍龙怪",
-      "target": "西海龙王太子",
+      "source": "西海龙王太子",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "仆人"
     },
@@ -3039,50 +2968,50 @@
       "relation": "仆人"
     },
     {
-      "source": "独角兕大王",
-      "target": "太上老君",
+      "source": "太上老君",
+      "target": "独角兕大王",
       "value": 1,
       "relation": "坐骑"
     },
     {
-      "source": "牛魔王",
-      "target": "哪吒",
+      "source": "哪吒",
+      "target": "牛魔王",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "玉面公主",
-      "target": "牛魔王",
+      "source": "牛魔王",
+      "target": "玉面公主",
       "value": 1,
       "relation": "妾"
     },
     {
-      "source": "金毛犼",
-      "target": "观音菩萨",
+      "source": "观音菩萨",
+      "target": "金毛犼",
       "value": 1,
       "relation": "坐骑"
     },
     {
-      "source": "黄眉道童",
-      "target": "弥勒佛",
+      "source": "弥勒佛",
+      "target": "黄眉道童",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "百眼魔君",
-      "target": "毗蓝婆菩萨",
+      "source": "毗蓝婆菩萨",
+      "target": "百眼魔君",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "青狮",
-      "target": "文殊菩萨",
+      "source": "文殊菩萨",
+      "target": "青狮",
       "value": 1,
       "relation": "坐骑"
     },
     {
-      "source": "白象",
-      "target": "普贤菩萨",
+      "source": "普贤菩萨",
+      "target": "白象",
       "value": 1,
       "relation": "坐骑"
     },
@@ -3099,44 +3028,38 @@
       "relation": "坐骑"
     },
     {
-      "source": "玉兔精",
-      "target": "嫦娥",
+      "source": "嫦娥",
+      "target": "玉兔精",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "白鹿精",
-      "target": "南极寿星",
+      "source": "南极寿星",
+      "target": "白鹿精",
       "value": 1,
       "relation": "坐骑"
     },
     {
-      "source": "黄眉大王",
-      "target": "东来佛祖笑和尚",
+      "source": "东来佛祖笑和尚",
+      "target": "黄眉大王",
       "value": 1,
       "relation": "仆人"
     },
     {
-      "source": "毗蓝婆菩萨",
-      "target": "昴日星官",
+      "source": "昴日星官",
+      "target": "毗蓝婆菩萨",
       "value": 1,
       "relation": "母亲"
     },
     {
-      "source": "嫦娥",
-      "target": "后羿",
+      "source": "后羿",
+      "target": "嫦娥",
       "value": 1,
       "relation": "妻"
     },
     {
       "source": "敖摩昂",
       "target": "敖闰",
-      "value": 1,
-      "relation": "儿"
-    },
-    {
-      "source": "哪吒",
-      "target": "李靖",
       "value": 1,
       "relation": "儿"
     },
@@ -3178,25 +3101,13 @@
     },
     {
       "source": "万圣龙王",
-      "target": "万圣公主",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "万圣龙王",
       "target": "九头虫",
       "value": 1,
       "relation": "儿女"
     },
     {
-      "source": "万圣龙王",
-      "target": "万圣龙婆",
-      "value": 1,
-      "relation": "妻子"
-    },
-    {
-      "source": "九头虫",
-      "target": "万圣公主",
+      "source": "万圣龙婆",
+      "target": "万圣龙王",
       "value": 1,
       "relation": "妻子"
     },
@@ -3340,12 +3251,6 @@
     },
     {
       "source": "劲节十八公",
-      "target": "凌空子",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "劲节十八公",
       "target": "孤直公",
       "value": 1,
       "relation": "好友"
@@ -3393,42 +3298,6 @@
       "relation": "师父"
     },
     {
-      "source": "唐僧",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "唐僧",
-      "target": "小白龙",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "唐僧",
-      "target": "沙和尚",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "唐僧",
-      "target": "猪八戒",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "唐僧",
-      "target": "殷温娇",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "唐僧",
-      "target": "陈光蕊",
-      "value": 1,
-      "relation": "父亲"
-    },
-    {
       "source": "天竺国公主",
       "target": "天竺国皇后",
       "value": 1,
@@ -3439,12 +3308,6 @@
       "target": "天竺国国王",
       "value": 1,
       "relation": "父亲"
-    },
-    {
-      "source": "天竺国国王",
-      "target": "天竺国公主",
-      "value": 1,
-      "relation": "儿女"
     },
     {
       "source": "天竺国国王",
@@ -3496,30 +3359,6 @@
     },
     {
       "source": "孙悟空",
-      "target": "小白龙",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "孙悟空",
-      "target": "沙和尚",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "孙悟空",
-      "target": "猪八戒",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "孙悟空",
-      "target": "唐僧",
-      "value": 1,
-      "relation": "师父"
-    },
-    {
-      "source": "孙悟空",
       "target": "菩提祖师",
       "value": 1,
       "relation": "师父"
@@ -3529,18 +3368,6 @@
       "target": "玉华州太子",
       "value": 1,
       "relation": "徒弟"
-    },
-    {
-      "source": "孤直公",
-      "target": "凌空子",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "孤直公",
-      "target": "劲节十八公",
-      "value": 1,
-      "relation": "好友"
     },
     {
       "source": "孤直公",
@@ -3561,36 +3388,6 @@
       "relation": "手下"
     },
     {
-      "source": "小白龙",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "小白龙",
-      "target": "沙和尚",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "小白龙",
-      "target": "猪八戒",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "小白龙",
-      "target": "唐僧",
-      "value": 1,
-      "relation": "师父"
-    },
-    {
-      "source": "小白龙",
-      "target": "西海龙王",
-      "value": 1,
-      "relation": "父亲"
-    },
-    {
       "source": "弥勒佛",
       "target": "黄眉老佛",
       "value": 1,
@@ -3603,8 +3400,8 @@
       "relation": "主公"
     },
     {
-      "source": "托塔天王李靖",
-      "target": "哪吒",
+      "source": "哪吒",
+      "target": "托塔天王李靖",
       "value": 1,
       "relation": "儿女"
     },
@@ -3627,8 +3424,8 @@
       "relation": "儿女"
     },
     {
-      "source": "托塔天王李靖",
-      "target": "巨灵神",
+      "source": "巨灵神",
+      "target": "托塔天王李靖",
       "value": 1,
       "relation": "手下"
     },
@@ -3694,24 +3491,6 @@
     },
     {
       "source": "拂云叟",
-      "target": "凌空子",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "拂云叟",
-      "target": "劲节十八公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "拂云叟",
-      "target": "孤直公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "拂云叟",
       "target": "杏仙",
       "value": 1,
       "relation": "好友"
@@ -3729,22 +3508,10 @@
       "relation": "大王"
     },
     {
-      "source": "斑衣鳜婆",
-      "target": "灵感大王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
       "source": "昴日星官",
       "target": "玉皇大帝",
       "value": 1,
       "relation": "主公"
-    },
-    {
-      "source": "昴日星官",
-      "target": "毗蓝婆菩萨",
-      "value": 1,
-      "relation": "母亲"
     },
     {
       "source": "朱紫国国王",
@@ -3754,37 +3521,13 @@
     },
     {
       "source": "杏仙",
-      "target": "凌空子",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "杏仙",
-      "target": "劲节十八公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "杏仙",
-      "target": "孤直公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "杏仙",
-      "target": "拂云叟",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "杏仙",
       "target": "赤身鬼使",
       "value": 1,
       "relation": "好友"
     },
     {
-      "source": "杏仙",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "杏仙",
       "value": 1,
       "relation": "心仪对象"
     },
@@ -3801,56 +3544,14 @@
       "relation": "手下"
     },
     {
-      "source": "毗蓝婆菩萨",
-      "target": "昴日星官",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "毗蓝婆菩萨",
-      "target": "百眼魔君",
-      "value": 1,
-      "relation": "手下"
-    },
-    {
-      "source": "沙和尚",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "沙和尚",
-      "target": "小白龙",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "沙和尚",
-      "target": "猪八戒",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "沙和尚",
-      "target": "唐僧",
-      "value": 1,
-      "relation": "师父"
-    },
-    {
       "source": "沙和尚",
       "target": "玉华王小太子",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "灵感大王",
-      "target": "观音菩萨",
-      "value": 1,
-      "relation": "主人"
-    },
-    {
-      "source": "灵感大王",
-      "target": "斑衣鱖婆",
+      "source": "斑衣鱖婆",
+      "target": "灵感大王",
       "value": 1,
       "relation": "手下"
     },
@@ -3868,12 +3569,6 @@
     },
     {
       "source": "牛蜢精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "牛蜢精",
       "target": "班毛精",
       "value": 1,
       "relation": "结拜兄弟姐妹"
@@ -3910,24 +3605,6 @@
     },
     {
       "source": "牛魔王",
-      "target": "红孩儿",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "牛魔王",
-      "target": "如意真仙",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "牛魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "牛魔王",
       "target": "狮狔王",
       "value": 1,
       "relation": "兄弟姐妹"
@@ -3955,18 +3632,6 @@
       "target": "𤟹狨王",
       "value": 1,
       "relation": "兄弟姐妹"
-    },
-    {
-      "source": "牛魔王",
-      "target": "玉面公主",
-      "value": 1,
-      "relation": "妻子"
-    },
-    {
-      "source": "牛魔王",
-      "target": "铁扇公主",
-      "value": 1,
-      "relation": "妻子"
     },
     {
       "source": "狐阿七大王",
@@ -3981,26 +3646,8 @@
       "relation": "侄子"
     },
     {
-      "source": "狐阿七大王",
-      "target": "九尾狐狸精",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "独角兕大王",
-      "target": "太上老君",
-      "value": 1,
-      "relation": "主人"
-    },
-    {
-      "source": "狮狔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "狮狔王",
-      "target": "牛魔王",
+      "source": "孙悟空",
+      "target": "狮狔王",
       "value": 1,
       "relation": "结拜兄弟姐妹"
     },
@@ -4030,24 +3677,6 @@
     },
     {
       "source": "猕猴王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "猕猴王",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "猕猴王",
-      "target": "狮狔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "猕猴王",
       "target": "蛟魔王",
       "value": 1,
       "relation": "结拜兄弟姐妹"
@@ -4066,61 +3695,25 @@
     },
     {
       "source": "猪八戒",
-      "target": "卵二姐",
-      "value": 1,
-      "relation": "妻子"
-    },
-    {
-      "source": "猪八戒",
-      "target": "高翠兰",
-      "value": 1,
-      "relation": "妻子"
-    },
-    {
-      "source": "猪八戒",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "猪八戒",
-      "target": "小白龙",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "猪八戒",
-      "target": "沙和尚",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "猪八戒",
-      "target": "唐僧",
-      "value": 1,
-      "relation": "师父"
-    },
-    {
-      "source": "猪八戒",
       "target": "玉华王二王子",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "玉兔精",
-      "target": "太阴星君",
+      "source": "太阴星君",
+      "target": "玉兔精",
       "value": 1,
       "relation": "主人"
     },
     {
-      "source": "玉兔精",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "玉兔精",
       "value": 1,
       "relation": "心仪对象"
     },
     {
-      "source": "玉皇大帝",
-      "target": "显圣二郎真君",
+      "source": "显圣二郎真君",
+      "target": "玉皇大帝",
       "value": 1,
       "relation": "侄子"
     },
@@ -4131,38 +3724,20 @@
       "relation": "妻子"
     },
     {
-      "source": "玉皇大帝",
-      "target": "哪吒三太子等",
+      "source": "哪吒三太子等",
+      "target": "玉皇大帝",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "玉皇大帝",
-      "target": "太上老君",
+      "source": "托塔李天王",
+      "target": "玉皇大帝",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "玉皇大帝",
-      "target": "太白金星",
-      "value": 1,
-      "relation": "手下"
-    },
-    {
-      "source": "玉皇大帝",
-      "target": "托塔李天王",
-      "value": 1,
-      "relation": "手下"
-    },
-    {
-      "source": "玉面公主",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "丈夫"
-    },
-    {
-      "source": "玉面公主",
-      "target": "万年狐王",
+      "source": "万年狐王",
+      "target": "玉面公主",
       "value": 1,
       "relation": "父亲"
     },
@@ -4171,18 +3746,6 @@
       "target": "蜘蛛精",
       "value": 1,
       "relation": "母亲"
-    },
-    {
-      "source": "班毛精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "班毛精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
     },
     {
       "source": "班毛精",
@@ -4215,8 +3778,8 @@
       "relation": "舅舅"
     },
     {
-      "source": "白面狐狸精",
-      "target": "比丘国国王",
+      "source": "比丘国国王",
+      "target": "白面狐狸精",
       "value": 1,
       "relation": "丈夫"
     },
@@ -4227,22 +3790,16 @@
       "relation": "父亲"
     },
     {
-      "source": "白鹿怪",
-      "target": "寿星",
+      "source": "寿星",
+      "target": "白鹿怪",
       "value": 1,
       "relation": "主人"
     },
     {
-      "source": "白鹿怪",
-      "target": "比丘国国王",
+      "source": "比丘国国王",
+      "target": "白鹿怪",
       "value": 1,
       "relation": "主公"
-    },
-    {
-      "source": "白鹿怪",
-      "target": "白面狐狸精",
-      "value": 1,
-      "relation": "妻子"
     },
     {
       "source": "百眼魔君",
@@ -4257,16 +3814,10 @@
       "relation": "丈夫"
     },
     {
-      "source": "百花羞",
-      "target": "宝象国国王",
+      "source": "宝象国国王",
+      "target": "百花羞",
       "value": 1,
       "relation": "父亲"
-    },
-    {
-      "source": "红孩儿",
-      "target": "如意真仙",
-      "value": 1,
-      "relation": "叔叔"
     },
     {
       "source": "红孩儿",
@@ -4281,22 +3832,10 @@
       "relation": "母亲"
     },
     {
-      "source": "红孩儿",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "父亲"
-    },
-    {
       "source": "羊力大仙",
       "target": "车迟国国王",
       "value": 1,
       "relation": "主公"
-    },
-    {
-      "source": "菩提祖师",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "徒弟"
     },
     {
       "source": "虎力大仙",
@@ -4312,24 +3851,6 @@
     },
     {
       "source": "蚂蜂精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蚂蜂精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蚂蜂精",
-      "target": "班毛精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蚂蜂精",
       "target": "蜜蜂精",
       "value": 1,
       "relation": "结拜兄弟姐妹"
@@ -4347,34 +3868,10 @@
       "relation": "结拜兄弟姐妹"
     },
     {
-      "source": "蚂蜂精",
-      "target": "百眼魔君",
+      "source": "百眼魔君",
+      "target": "蚂蜂精",
       "value": 1,
       "relation": "舅舅"
-    },
-    {
-      "source": "蛟魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蛟魔王",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蛟魔王",
-      "target": "狮狔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蛟魔王",
-      "target": "猕猴王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
     },
     {
       "source": "蛟魔王",
@@ -4390,30 +3887,6 @@
     },
     {
       "source": "蜘蛛精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "蜘蛛精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "蜘蛛精",
-      "target": "班毛精",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "蜘蛛精",
-      "target": "蚂蜂精",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "蜘蛛精",
       "target": "蜜蜂精",
       "value": 1,
       "relation": "儿女"
@@ -4431,42 +3904,6 @@
       "relation": "儿女"
     },
     {
-      "source": "蜘蛛精",
-      "target": "百眼魔君",
-      "value": 1,
-      "relation": "师兄弟"
-    },
-    {
-      "source": "蜜蜂精",
-      "target": "蜘蛛精",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "蜜蜂精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜜蜂精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜜蜂精",
-      "target": "班毛精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜜蜂精",
-      "target": "蚂蜂精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
       "source": "蜜蜂精",
       "target": "蜻蜓精",
       "value": 1,
@@ -4479,46 +3916,10 @@
       "relation": "结拜兄弟姐妹"
     },
     {
-      "source": "蜜蜂精",
-      "target": "百眼魔君",
-      "value": 1,
-      "relation": "舅舅"
-    },
-    {
-      "source": "蜻蜓精",
-      "target": "蜘蛛精",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "蜻蜓精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜻蜓精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜻蜓精",
-      "target": "班毛精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜻蜓精",
-      "target": "蚂蜂精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蜻蜓精",
+      "source": "百眼魔君",
       "target": "蜜蜂精",
       "value": 1,
-      "relation": "结拜兄弟姐妹"
+      "relation": "舅舅"
     },
     {
       "source": "蜻蜓精",
@@ -4527,62 +3928,20 @@
       "relation": "结拜兄弟姐妹"
     },
     {
-      "source": "蜻蜓精",
-      "target": "百眼魔君",
+      "source": "百眼魔君",
+      "target": "蜻蜓精",
       "value": 1,
       "relation": "舅舅"
     },
     {
-      "source": "蝎子精",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "蝎子精",
       "value": 1,
       "relation": "心仪对象"
     },
     {
-      "source": "蠦蜂精",
-      "target": "蜘蛛精",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "抹蜡精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "牛蜢精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "班毛精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "蚂蜂精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "蜜蜂精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "蜻蜓精",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "蠦蜂精",
-      "target": "百眼魔君",
+      "source": "百眼魔君",
+      "target": "蠦蜂精",
       "value": 1,
       "relation": "舅舅"
     },
@@ -4593,16 +3952,10 @@
       "relation": "主公"
     },
     {
-      "source": "西梁女国女王",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "西梁女国女王",
       "value": 1,
       "relation": "心仪对象"
-    },
-    {
-      "source": "西梁女国女王",
-      "target": "西梁女国太师",
-      "value": 1,
-      "relation": "手下"
     },
     {
       "source": "西梁女国女王",
@@ -4611,38 +3964,26 @@
       "relation": "手下"
     },
     {
-      "source": "观音菩萨",
-      "target": "如来佛祖",
+      "source": "如来佛祖",
+      "target": "观音菩萨",
       "value": 1,
       "relation": "师父"
     },
     {
-      "source": "观音菩萨",
-      "target": "善财童子",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "观音菩萨",
-      "target": "善财龙女",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "观音菩萨",
-      "target": "守山大神",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "观音菩萨",
-      "target": "惠岸行者",
-      "value": 1,
-      "relation": "徒弟"
-    },
-    {
-      "source": "赛太岁",
+      "source": "善财龙女",
       "target": "观音菩萨",
+      "value": 1,
+      "relation": "徒弟"
+    },
+    {
+      "source": "惠岸行者",
+      "target": "观音菩萨",
+      "value": 1,
+      "relation": "徒弟"
+    },
+    {
+      "source": "观音菩萨",
+      "target": "赛太岁",
       "value": 1,
       "relation": "主人"
     },
@@ -4653,14 +3994,14 @@
       "relation": "心仪对象"
     },
     {
-      "source": "赛太岁",
-      "target": "有来有去",
+      "source": "有来有去",
+      "target": "赛太岁",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "赛太岁",
-      "target": "猩猩怪",
+      "source": "猩猩怪",
+      "target": "赛太岁",
       "value": 1,
       "relation": "手下"
     },
@@ -4671,36 +4012,6 @@
       "relation": "手下"
     },
     {
-      "source": "赤身鬼使",
-      "target": "凌空子",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "赤身鬼使",
-      "target": "劲节十八公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "赤身鬼使",
-      "target": "孤直公",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "赤身鬼使",
-      "target": "拂云叟",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
-      "source": "赤身鬼使",
-      "target": "杏仙",
-      "value": 1,
-      "relation": "好友"
-    },
-    {
       "source": "辟寒大王",
       "target": "辟尘大王",
       "value": 1,
@@ -4714,63 +4025,27 @@
     },
     {
       "source": "辟尘大王",
-      "target": "辟寒大王",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "辟尘大王",
       "target": "辟暑大王",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "辟暑大王",
-      "target": "辟寒大王",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "辟暑大王",
-      "target": "辟尘大王",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "迎阳驿驿丞",
-      "target": "西梁女国女王",
-      "value": 1,
-      "relation": "主公"
-    },
-    {
-      "source": "金圣娘娘",
-      "target": "朱紫国国王",
-      "value": 1,
-      "relation": "丈夫"
-    },
-    {
-      "source": "金池长老",
-      "target": "广智",
+      "source": "广智",
+      "target": "金池长老",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "金池长老",
-      "target": "广谋",
+      "source": "广谋",
+      "target": "金池长老",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "金池长老",
-      "target": "观音禅院",
+      "source": "观音禅院",
+      "target": "金池长老",
       "value": 1,
       "relation": "徒弟"
-    },
-    {
-      "source": "金角大王",
-      "target": "太上老君",
-      "value": 1,
-      "relation": "主人"
     },
     {
       "source": "金角大王",
@@ -4779,140 +4054,80 @@
       "relation": "兄弟姐妹"
     },
     {
-      "source": "金角大王",
-      "target": "伶俐虫",
+      "source": "伶俐虫",
+      "target": "金角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "金角大王",
-      "target": "倚海龙",
+      "source": "倚海龙",
+      "target": "金角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "金角大王",
-      "target": "巴山虎",
+      "source": "巴山虎",
+      "target": "金角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "金角大王",
-      "target": "精细鬼",
+      "source": "精细鬼",
+      "target": "金角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "金角大王",
-      "target": "九尾狐狸精",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "金角大王",
-      "target": "狐阿七大王",
-      "value": 1,
-      "relation": "舅舅"
-    },
-    {
-      "source": "金鼻白毛老鼠精",
-      "target": "哪吒",
+      "source": "哪吒",
+      "target": "金鼻白毛老鼠精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "金鼻白毛老鼠精",
-      "target": "唐僧",
+      "source": "唐僧",
+      "target": "金鼻白毛老鼠精",
       "value": 1,
       "relation": "心仪对象"
     },
     {
-      "source": "金鼻白毛老鼠精",
-      "target": "托塔天王李靖",
-      "value": 1,
-      "relation": "父亲"
-    },
-    {
-      "source": "铁扇公主",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "丈夫"
-    },
-    {
-      "source": "铁扇公主",
-      "target": "红孩儿",
-      "value": 1,
-      "relation": "儿女"
-    },
-    {
-      "source": "银角大王",
-      "target": "太上老君",
-      "value": 1,
-      "relation": "主人"
-    },
-    {
-      "source": "银角大王",
-      "target": "金角大王",
-      "value": 1,
-      "relation": "兄弟姐妹"
-    },
-    {
-      "source": "银角大王",
-      "target": "伶俐虫",
+      "source": "伶俐虫",
+      "target": "银角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "银角大王",
-      "target": "倚海龙",
+      "source": "倚海龙",
+      "target": "银角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "银角大王",
-      "target": "巴山虎",
+      "source": "巴山虎",
+      "target": "银角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "银角大王",
-      "target": "精细鬼",
+      "source": "精细鬼",
+      "target": "银角大王",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "银角大王",
-      "target": "九尾狐狸精",
-      "value": 1,
-      "relation": "母亲"
-    },
-    {
-      "source": "银角大王",
-      "target": "狐阿七大王",
-      "value": 1,
-      "relation": "舅舅"
-    },
-    {
-      "source": "镇元子",
-      "target": "明月",
+      "source": "明月",
+      "target": "镇元子",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "镇元子",
-      "target": "清风",
+      "source": "清风",
+      "target": "镇元子",
       "value": 1,
       "relation": "徒弟"
     },
     {
-      "source": "镇元子",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "青毛狮子怪",
-      "target": "文殊菩萨",
+      "source": "文殊菩萨",
+      "target": "青毛狮子怪",
       "value": 1,
       "relation": "主人"
     },
@@ -4923,20 +4138,14 @@
       "relation": "主人"
     },
     {
-      "source": "狮驼岭妖怪",
-      "target": "文殊菩萨",
+      "source": "文殊菩萨",
+      "target": "狮驼岭妖怪",
       "value": 1,
       "relation": "主人"
     },
     {
-      "source": "青毛狮子怪",
-      "target": "云程万里鹏",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "狮驼岭妖怪",
-      "target": "云程万里鹏",
+      "source": "云程万里鹏",
+      "target": "狮驼岭妖怪",
       "value": 1,
       "relation": "结拜兄弟姐妹"
     },
@@ -4949,36 +4158,6 @@
     {
       "source": "狮驼岭妖怪",
       "target": "黄牙老象怪",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "狮狔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "猕猴王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "鹏魔王",
-      "target": "蛟魔王",
       "value": 1,
       "relation": "结拜兄弟姐妹"
     },
@@ -4989,218 +4168,164 @@
       "relation": "结拜兄弟姐妹"
     },
     {
-      "source": "鹿力大仙",
-      "target": "车迟国国王",
+      "source": "车迟国国王",
+      "target": "鹿力大仙",
       "value": 1,
       "relation": "主公"
     },
     {
-      "source": "黄牙老象怪",
-      "target": "普贤菩萨",
+      "source": "普贤菩萨",
+      "target": "黄牙老象怪",
       "value": 1,
       "relation": "主人"
     },
     {
-      "source": "黄牙老象怪",
-      "target": "小钻风",
+      "source": "小钻风",
+      "target": "黄牙老象怪",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "黄牙老象怪",
-      "target": "云程万里鹏",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "黄牙老象怪",
-      "target": "青毛狮子怪",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "黄狮精",
-      "target": "伏狸狮怪",
+      "source": "伏狸狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "抟象狮怪",
+      "source": "抟象狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "狻猊狮怪",
+      "source": "狻猊狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "猱狮怪",
+      "source": "猱狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "白泽狮怪",
+      "source": "白泽狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "雪狮怪",
+      "source": "雪狮怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "黄狮精",
-      "target": "刁钻古怪",
+      "source": "刁钻古怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "黄狮精",
-      "target": "古怪刁钻",
+      "source": "古怪刁钻",
+      "target": "黄狮精",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "黄狮精",
-      "target": "青脸儿怪",
+      "source": "青脸儿怪",
+      "target": "黄狮精",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "黄狮精",
-      "target": "九灵元圣",
-      "value": 1,
-      "relation": "爷爷"
-    },
-    {
-      "source": "黄眉老佛",
-      "target": "弥勒佛",
-      "value": 1,
-      "relation": "主人"
-    },
-    {
-      "source": "黄袍怪",
-      "target": "玉皇大帝",
+      "source": "玉皇大帝",
+      "target": "黄袍怪",
       "value": 1,
       "relation": "主公"
     },
     {
-      "source": "黄袍怪",
-      "target": "百花羞公主",
+      "source": "百花羞公主",
+      "target": "黄袍怪",
       "value": 1,
       "relation": "妻子"
     },
     {
-      "source": "黄风怪",
-      "target": "虎先锋",
+      "source": "虎先锋",
+      "target": "黄风怪",
       "value": 1,
       "relation": "手下"
     },
     {
-      "source": "鼍龙怪",
-      "target": "小骊龙",
+      "source": "小骊龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "小黄龙",
+      "source": "小黄龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "徒劳龙",
+      "source": "徒劳龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "敬仲龙",
+      "source": "敬仲龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "稳兽龙",
+      "source": "稳兽龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "蜃龙",
+      "source": "蜃龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "赤髯龙",
+      "source": "赤髯龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "青背龙",
+      "source": "青背龙",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "兄弟姐妹"
     },
     {
-      "source": "鼍龙怪",
-      "target": "西海龙王妹妹",
+      "source": "西海龙王妹妹",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "母亲"
     },
     {
-      "source": "鼍龙怪",
-      "target": "泾河龙王",
+      "source": "泾河龙王",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "父亲"
     },
     {
-      "source": "鼍龙怪",
-      "target": "西海龙王",
+      "source": "西海龙王",
+      "target": "鼍龙怪",
       "value": 1,
       "relation": "舅舅"
     },
     {
-      "source": "𤟹狨王",
-      "target": "孙悟空",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "𤟹狨王",
-      "target": "牛魔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "𤟹狨王",
-      "target": "狮狔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "𤟹狨王",
-      "target": "猕猴王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "𤟹狨王",
-      "target": "蛟魔王",
-      "value": 1,
-      "relation": "结拜兄弟姐妹"
-    },
-    {
-      "source": "𤟹狨王",
-      "target": "鹏魔王",
+      "source": "孙悟空",
+      "target": "𤟹狨王",
       "value": 1,
       "relation": "结拜兄弟姐妹"
     }

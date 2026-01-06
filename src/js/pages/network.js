@@ -233,13 +233,36 @@ function createFilterControls() {
 
         if (!allNetworkData) return;
 
-        // 搜索匹配的节点（支持别名）
+        // 搜索匹配的节点（支持别名和部分匹配）
+        const queryLower = query.toLowerCase();
+        
+        // 构建反向映射：从标准名称到所有可能的别名（包括别名映射表中的）
+        const reverseAliasMap = {};
+        Object.entries(ALIAS_MAP).forEach(([alias, standard]) => {
+            if (!reverseAliasMap[standard]) {
+                reverseAliasMap[standard] = [];
+            }
+            reverseAliasMap[standard].push(alias);
+        });
+        
         const matches = allNetworkData.nodes.filter(node => {
             const name = node.name.toLowerCase();
-            const queryLower = query.toLowerCase();
-            // 检查名称或别名是否匹配
-            if (name.includes(queryLower) || name.includes(query)) return true;
+            
+            // 1. 检查标准名称是否包含查询词
+            if (name.includes(queryLower)) return true;
+            
+            // 2. 检查节点自带的别名是否包含查询词
             if (node.aliases && node.aliases.some(alias => alias.toLowerCase().includes(queryLower))) return true;
+            
+            // 3. 检查别名映射表中的别名是否包含查询词
+            // 例如：搜索"三藏"，应该能找到"唐僧"（因为"唐三藏"→"唐僧"，且"唐三藏"包含"三藏"）
+            const possibleAliases = reverseAliasMap[node.name] || [];
+            if (possibleAliases.some(alias => alias.toLowerCase().includes(queryLower))) return true;
+            
+            // 4. 检查查询词是否是某个别名的标准名称（反向查找）
+            const standardName = getStandardName(query);
+            if (standardName === node.name || standardName === node.id) return true;
+            
             return false;
         });
 
@@ -301,27 +324,17 @@ function updateFilterButtons() {
 
 function filterNetworkData(data, mode) {
     if (mode === 'all') return data;
-    // ... 原有的 main 模式筛选逻辑保持不变 ...
-    const mainNodes = new Set();
-    const mainNodeIds = new Set();
-    data.nodes.forEach(node => {
-        if (node.category === '主角') { mainNodes.add(node.id); mainNodeIds.add(node.id); }
-    });
-    data.nodes.forEach(node => { if (node.value >= 12) { mainNodes.add(node.id); mainNodeIds.add(node.id); } });
-    
-    const connectedToMain = new Set();
-    data.links.forEach(link => {
-        if (mainNodeIds.has(link.source)) connectedToMain.add(link.target);
-        else if (mainNodeIds.has(link.target)) connectedToMain.add(link.source);
-    });
-    
-    data.nodes.forEach(node => {
-        if (connectedToMain.has(node.id) && node.value >= 10) mainNodes.add(node.id);
-    });
-    
-    const filteredNodes = data.nodes.filter(node => mainNodes.has(node.id));
-    const filteredLinks = data.links.filter(link => mainNodes.has(link.source) && mainNodes.has(link.target));
-    
+
+    // main 模式：按“关系数（不同邻居数）”从高到低排序，取前 20 个人物
+    const sortedNodes = [...data.nodes].sort((a, b) => b.value - a.value);
+    const topN = 20;
+    const mainNodesSet = new Set(sortedNodes.slice(0, topN).map(n => n.id));
+
+    const filteredNodes = data.nodes.filter(node => mainNodesSet.has(node.id));
+    const filteredLinks = data.links.filter(
+        link => mainNodesSet.has(link.source) && mainNodesSet.has(link.target)
+    );
+
     return { nodes: filteredNodes, links: filteredLinks, categories: data.categories };
 }
 
@@ -333,9 +346,10 @@ function calculateNodeSize(value, minValue, maxValue) {
 }
 
 function calculateLinkWidth(value, minValue, maxValue) {
-    if (maxValue === minValue) return 2;
+    if (maxValue === minValue) return 3;
     const normalized = (value - minValue) / (maxValue - minValue);
-    return 1 + normalized * 5; 
+    // 加大连线粗细的对比，从约 1px ~ 9px
+    return 1 + normalized * 8; 
 }
 
 // 存储固定状态 (ID Set)
@@ -349,14 +363,25 @@ function updateChart(chart, data, filterMode) {
 
     const filteredData = filterNetworkData(data, filterMode);
     
-    // 计算极值
+    // 计算极值（节点）
     const nodeValues = filteredData.nodes.map(n => n.value);
     const minNodeValue = Math.min(...nodeValues);
     const maxNodeValue = Math.max(...nodeValues);
-    
-    const linkValues = filteredData.links.map(l => l.value);
-    const minLinkValue = linkValues.length > 0 ? Math.min(...linkValues) : 1;
-    const maxLinkValue = linkValues.length > 0 ? Math.max(...linkValues) : 1;
+
+    // 建立节点 value 映射表，后面用来按两端节点的重要性计算边的“强度”
+    const nodeValueMap = {};
+    filteredData.nodes.forEach(n => {
+        nodeValueMap[n.id] = n.value;
+    });
+
+    // 计算每条边的“强度”：用两端节点 value 的平均值表示
+    const linkStrengths = filteredData.links.map(l => {
+        const sourceValue = nodeValueMap[l.source] || 1;
+        const targetValue = nodeValueMap[l.target] || 1;
+        return (sourceValue + targetValue) / 2;
+    });
+    const minLinkStrength = linkStrengths.length > 0 ? Math.min(...linkStrengths) : 1;
+    const maxLinkStrength = linkStrengths.length > 0 ? Math.max(...linkStrengths) : 1;
 
     // 容器中心
     const containerWidth = chart.getWidth();
@@ -376,13 +401,37 @@ function updateChart(chart, data, filterMode) {
             y = containerHeight / 2;
             shouldFix = true; // 固定孙悟空位置
         }
+        
+        // 关系数为0的节点：放到边缘位置，避免挡在中间
+        let nodeX = x !== null ? x : (node.x || null);
+        let nodeY = y !== null ? y : (node.y || null);
+        if (node.value === 0 && !shouldFix && nodeX === null) {
+            // 随机放到边缘位置（左上、右上、左下、右下）
+            const edge = Math.floor(Math.random() * 4);
+            const margin = 50; // 边缘边距
+            if (edge === 0) { // 左上
+                nodeX = margin;
+                nodeY = margin;
+            } else if (edge === 1) { // 右上
+                nodeX = containerWidth - margin;
+                nodeY = margin;
+            } else if (edge === 2) { // 左下
+                nodeX = margin;
+                nodeY = containerHeight - margin;
+            } else { // 右下
+                nodeX = containerWidth - margin;
+                nodeY = containerHeight - margin;
+            }
+        }
 
         return {
             ...node,
             symbolSize: calculateNodeSize(node.value, minNodeValue, maxNodeValue),
             fixed: shouldFix, // ECharts 只有 true/false，位置由 x/y 决定
-            x: x !== null ? x : (node.x || null), // 孙悟空强制居中，其他节点保留位置或使用默认
-            y: y !== null ? y : (node.y || null),
+            x: nodeX,
+            y: nodeY,
+            // 关系数为0的节点降低斥力权重，让它们不影响重要节点
+            // 通过设置一个很小的 symbolSize 权重来实现（ECharts 会根据节点大小计算斥力）
             // 优化：设置 label 避免默认太乱
             label: {
                 show: node.value > (maxNodeValue * 0.3) || node.category === '主角' // 只有重要人物默认显示名字
@@ -390,14 +439,19 @@ function updateChart(chart, data, filterMode) {
         };
     });
 
-    const links = filteredData.links.map(link => ({
-        ...link,
-        lineStyle: {
-            width: calculateLinkWidth(link.value, minLinkValue, maxLinkValue),
-            curveness: 0.2, // 稍微弯曲一点好看
-            opacity: 0.5
-        }
-    }));
+    const links = filteredData.links.map((link, index) => {
+        const strength = linkStrengths[index] || 1;
+        return {
+            ...link,
+            // 保存一个专门用于展示的“关系强度”，基于两端节点的连接数
+            strength,
+            lineStyle: {
+                width: calculateLinkWidth(strength, minLinkStrength, maxLinkStrength),
+                curveness: 0.2, // 稍微弯曲一点好看
+                opacity: 0.5
+            }
+        };
+    });
 
     const option = {
         title: {
@@ -415,10 +469,11 @@ function updateChart(chart, data, filterMode) {
                     return `
                         <div style="font-weight:bold">${params.name}</div>
                         类别: ${params.data.category}<br/>
-                        频次: ${params.value}${aliases}
+                        关系数: ${params.value}${aliases}
                     `;
                 } else {
-                    return `${params.data.source} ↔ ${params.data.target}<br/>关系: ${params.data.relation || '关联'}<br/>强度: ${params.data.value}`;
+                    // 边上只展示关系类型，不再显示具体数值的关系强度
+                    return `${params.data.source} ↔ ${params.data.target}<br/>关系: ${params.data.relation || '关联'}`;
                 }
             }
         },
@@ -434,8 +489,8 @@ function updateChart(chart, data, filterMode) {
             data: nodes,
             links: links,
             categories: filteredData.categories,
-            roam: true, // 开启原生缩放和平移，非常流畅
-            draggable: true, // 允许拖拽
+            roam: true, // 开启原生缩放和平移
+            draggable: true, // 允许拖拽，但我们会降低力导向的“弹性”以减少大幅晃动
             focusNodeAdjacency: false, // 关闭旧版的高亮，使用新版 emphasis.focus
             
             // 标签配置
@@ -458,17 +513,17 @@ function updateChart(chart, data, filterMode) {
                 }
             },
             
-            // 力引导布局配置 (关键修改)
+            // 力引导布局配置：适度减弱弹性，避免轻微拖拽引起大幅晃动
             force: {
-                // 斥力：范围值，根据节点大小自动计算斥力
-                repulsion: [100, 800], 
-                // 边长：范围值
-                edgeLength: [50, 200],
-                // 摩擦力：0.6 比较平衡，太小会乱动，太大不动
-                friction: 0.6,
-                // 引力：让节点聚拢
-                gravity: 0.1,
-                // 布局动画：设为 true 才有物理效果
+                // 斥力：整体降低，让节点之间“推开”的力小一些
+                repulsion: [50, 300],
+                // 边长：适当增大下限，让布局更“紧一些”但不至于太挤
+                edgeLength: [80, 220],
+                // 摩擦力：调高到 0.85，拖动后更快稳定下来，减少抖动
+                friction: 0.85,
+                // 引力：略微增大，让整体收拢一点，减少大幅飞出
+                gravity: 0.2,
+                // 布局动画：保持启用，但在摩擦较高时运动幅度会明显减小
                 layoutAnimation: true
             },
             
@@ -506,10 +561,12 @@ function updateChart(chart, data, filterMode) {
         }
     });
 
-    // 2. 节点点击事件：手动触发高亮 (持久化)
+    // 2. 节点点击事件：手动触发高亮 (持久化，类似鼠标悬停效果)
     chart.on('click', (params) => {
         if (params.dataType === 'node') {
-            // 高亮当前节点和邻居
+            // 先取消所有高亮
+            chart.dispatchAction({ type: 'downplay' });
+            // 然后高亮当前节点和它的所有相邻节点及连线
             chart.dispatchAction({
                 type: 'highlight',
                 seriesIndex: 0,
@@ -697,7 +754,6 @@ function updateRelationshipDisplay() {
     
     if (relationship) {
         const relationType = relationship.relation || '关联';
-        const relationStrength = relationship.value;
         
         relationshipContent.innerHTML = `
             <div style="line-height: 2;">
@@ -708,7 +764,6 @@ function updateRelationshipDisplay() {
                 </div>
                 <div style="background: white; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem;">
                     <div><strong>关系类型：</strong><span style="color: #667eea;">${relationType}</span></div>
-                    <div><strong>关系强度：</strong><span style="color: #667eea;">${relationStrength}</span>（出现次数）</div>
                 </div>
             </div>
         `;
