@@ -1,98 +1,106 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>《西游记》文本数据可视化</title>
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">
-    <link rel="stylesheet" href="src/css/style.css">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts@5/map/js/china.js"></script>
     <script src="https://fastly.jsdelivr.net/npm/echarts-wordcloud@2/dist/echarts-wordcloud.min.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- ========== 导航栏 ========== -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <a class="navbar-brand" href="#">🐒 《西游记》文本可视化</a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">首页</a></li>
-                <li><a href="#network">人物关系</a></li>
-                <li><a href="#character">特征分析</a></li>
-                <li><a href="#route">取经路线</a></li>
-                <li><a href="#wordcloud">词频分析</a></li>
-                <li><a href="#sentiment">情感评价</a></li>
-            </ul>
-        </div>
+      <div class="navbar-container">
+        <a class="navbar-brand" href="#">🐒 《西游记》文本可视化</a>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">首页</a></li>
+          <li><a href="#network">人物关系</a></li>
+          <li><a href="#character">特征分析</a></li>
+          <li><a href="#route">取经路线</a></li>
+          <li><a href="#wordcloud">词频分析</a></li>
+          <li><a href="#sentiment">情感评价</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- ========== 容器 ========== -->
     <div class="container">
-        <!-- ========== 首页 ========== -->
-        <div id="home" class="page active">
-            <div class="page-header">
-                <h1 class="page-title">《西游记》文本数据可视化分析</h1>
-                <p class="page-description">
-                    本项目通过自然语言处理技术对《西游记》原著文本进行深度挖掘，从人物关系、特征属性、地理路径、词频演变及情感倾向等维度，探索古典名著的数字化呈现方式。
-                </p>
-            </div>
-
-            <div class="charts-grid home-grid">
-                <div class="card">
-                    <div class="card-icon">🕸️</div>
-                    <h3>人物关系网络分析</h3>
-                    <p>基于文本共现分析，提取主要人物间的社交网络，展示角色交互的紧密程度。</p>
-                    <a href="#network" class="btn">进入查看</a>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔍</div>
-                    <h3>角色属性特征分析</h3>
-                    <p>对文本中提及的妖怪、神仙等角色属性进行分类统计，分析其来源与结局分布。</p>
-                    <a href="#character" class="btn">进入查看</a>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🗺️</div>
-                    <h3>取经路线空间可视化</h3>
-                    <p>结合文本叙事逻辑，还原唐僧师徒的地理行迹，可视化呈现九九八十一难的空间分布。</p>
-                    <a href="#route" class="btn">进入查看</a>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">☁️</div>
-                    <h3>文本高频词汇分析</h3>
-                    <p>利用词云技术展示全书及特定章节的核心词汇，分析叙事重心的阶段性演变。</p>
-                    <a href="#wordcloud" class="btn">进入查看</a>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">💬</div>
-                    <h3>角色情感倾向分析</h3>
-                    <p>整合文本评论数据，分析读者对核心角色的情感态度与关键词评价。</p>
-                    <a href="#sentiment" class="btn">进入查看</a>
-                </div>
-            </div>
+      <!-- ========== 首页 ========== -->
+      <div id="home" class="page active">
+        <div class="page-header">
+          <h1 class="page-title">《西游记》文本数据可视化分析</h1>
+          <p class="page-description">
+            本项目通过自然语言处理技术对《西游记》原著文本进行深度挖掘，从人物关系、特征属性、地理路径、词频演变及情感倾向等维度，探索古典名著的数字化呈现方式。
+          </p>
         </div>
 
-        <!-- ========== 人物关系网络 ========== -->
-        <div id="network" class="page">
-            <div class="page-header">
-                <h1 class="page-title">人物关系网络分析</h1>
-                <p class="page-description">
-                    展示西游记中主要人物之间的关系网络。节点代表人物，边代表人物之间的联系。节点大小表示人物在网络中的重要性（关系数量与强度），颜色代表人物类型。
-                </p>
-            </div>
+        <div class="charts-grid home-grid">
+          <div class="card">
+            <div class="card-icon">🕸️</div>
+            <h3>人物关系网络分析</h3>
+            <p>
+              基于文本共现分析，提取主要人物间的社交网络，展示角色交互的紧密程度。
+            </p>
+            <a href="#network" class="btn">进入查看</a>
+          </div>
 
-            <div class="chart-container">
-                <div id="network-chart" class="chart-wrapper"></div>
-            </div>
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3>角色属性特征分析</h3>
+            <p>
+              对文本中提及的妖怪、神仙等角色属性进行分类统计，分析其来源与结局分布。
+            </p>
+            <a href="#character" class="btn">进入查看</a>
+          </div>
 
-            <div class="charts-grid dual" style="grid-template-columns: 1fr 1fr;">
+          <div class="card">
+            <div class="card-icon">🗺️</div>
+            <h3>取经路线空间可视化</h3>
+            <p>
+              结合文本叙事逻辑，还原唐僧师徒的地理行迹，可视化呈现九九八十一难的空间分布。
+            </p>
+            <a href="#route" class="btn">进入查看</a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">☁️</div>
+            <h3>文本高频词汇分析</h3>
+            <p>
+              利用词云技术展示全书及特定章节的核心词汇，分析叙事重心的阶段性演变。
+            </p>
+            <a href="#wordcloud" class="btn">进入查看</a>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">💬</div>
+            <h3>角色情感倾向分析</h3>
+            <p>整合文本评论数据，分析读者对核心角色的情感态度与关键词评价。</p>
+            <a href="#sentiment" class="btn">进入查看</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 人物关系网络 ========== -->
+      <div id="network" class="page">
+        <div class="page-header">
+          <h1 class="page-title">人物关系网络分析</h1>
+          <p class="page-description">
+            展示西游记中主要人物之间的关系网络。节点代表人物，边代表人物之间的联系。节点大小表示人物在网络中的重要性（关系数量与强度），颜色代表人物类型。
+          </p>
+        </div>
+
+        <div class="chart-container">
+          <div id="network-chart" class="chart-wrapper tall"></div>
+        </div>        
+        <div class="charts-grid dual" style="grid-template-columns: 1fr 1fr;">
                 <div class="card">
                     <h4>📋 图表说明</h4>
                     <ul style="padding-left: 1.5rem; line-height: 1.8;">
@@ -116,351 +124,336 @@
                     <p id="network-stats" style="line-height: 2;">加载中...</p>
                 </div>
             </div>
+      </div>
+
+      <!-- ========== 人物特征分析 ========== -->
+      <div id="character" class="page">
+        <div class="page-header">
+          <h1 class="page-title">角色属性特征分析</h1>
+          <p class="page-description">
+            对原著中出现的各类角色进行量化分析，重点探讨妖怪的出身背景、最终结局以及神仙派系的文本分布特征。
+          </p>
         </div>
 
-        <!-- ========== 人物特征分析 ========== -->
-        <div id="character" class="page">
-            <div class="page-header">
-                <h1 class="page-title">角色属性特征分析</h1>
-                <p class="page-description">
-                    对原著中出现的各类角色进行量化分析，重点探讨妖怪的出身背景、最终结局以及神仙派系的文本分布特征。
-                </p>
+        <div class="charts-grid">
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>妖怪来历分布</h3>
             </div>
+            <div id="demon-origin-chart" class="chart-wrapper short"></div>
+          </div>
 
-            <div class="charts-grid">
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>妖怪来历分布</h3>
-                    </div>
-                    <div id="demon-origin-chart" class="chart-wrapper short"></div>
-                </div>
-
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>妖怪结局分布</h3>
-                    </div>
-                    <div id="demon-ending-chart" class="chart-wrapper short"></div>
-                </div>
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>妖怪结局分布</h3>
             </div>
-
-            <div class="chart-container">
-                <div style="padding: 1rem;">
-                    <h3>神仙派系对比 - 出场频次</h3>
-                </div>
-                <div id="deity-sect-chart" class="chart-wrapper short"></div>
-            </div>
-
-            <div class="charts-grid">
-                <div class="card">
-                    <h4>📊 数据说明</h4>
-                    <ul style="padding-left: 1.5rem;">
-                        <li><strong>妖怪来历：</strong>天庭下凡、本土成精、其他</li>
-                        <li><strong>妖怪结局：</strong>被击杀、被收服、被神仙带回</li>
-                        <li><strong>神仙派系：</strong>道教、佛教</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4 style="margin: 0 0 0.75rem 0; color: #333;">🔍 分析视角</h4>
-                    <p style="margin: 0.5rem 0; color: #666;">通过饼图和柱状图展示不同人物特征的分布，帮助理解故事中的人物构成和发展脉络。</p>
-                    <p style="margin: 0.5rem 0; color: #666;"><strong>主要发现：</strong></p>
-                    <ul style="margin: 0; padding-left: 1.2rem; color: #666;">
-                        <li>妖怪主要分为天庭下凡和本土成精两类</li>
-                        <li>妖怪结局与被神仙带回、被击杀和被收服三种</li>
-                        <li>神仙派系以佛教为主，道教神仙出场次数相对较少</li>
-                        <li>随着取经进程，佛教神仙出场频率逐渐增加</li>
-                    </ul>
-                    <p style="margin: 0.75rem 0 0 0; color: #666; font-size: 0.9rem; font-style: italic;">
-                        💡 提示：点击饼图扇区可以查看详细分析
-                    </p>
-                </div>
-            </div>
+            <div id="demon-ending-chart" class="chart-wrapper short"></div>
+          </div>
         </div>
 
-        <!-- ========== 取经路线 ========== -->
-        <div id="route" class="page">
-            <div class="page-header">
-                <h1 class="page-title">取经路线空间可视化</h1>
-                <p class="page-description">
-                    基于文本叙事顺序，还原从大唐长安至西天灵山的地理路径。通过空间坐标标注关键地点与磨难事件，展现叙事结构的空间维度。
-                </p>
-            </div>
-
-            <div class="chart-container">
-                <div id="route-chart" class="chart-wrapper tall"></div>
-            </div>
-
-            <div id="route-summary"></div>
-
-            <div class="charts-grid">
-                <div class="card">
-                    <h3 style="margin-bottom: 1.5rem; text-align: left; color: #2d3748;">📍 路线详细信息</h3>
-                    <div id="route-info">加载中...</div>
-                </div>
-                <div class="card">
-                    <h3 style="margin-bottom: 1.5rem; text-align: left; color: #2d3748;">⏱️ 行程节点速览</h3>
-                    <div id="route-stats">加载中...</div>
-                </div>
-            </div>
+        <div class="chart-container">
+          <div style="padding: 1rem">
+            <h3>神仙派系对比 - 出场频次</h3>
+          </div>
+          <div id="deity-sect-chart" class="chart-wrapper short"></div>
         </div>
 
-        <!-- ========== 高频词汇 ========== -->
-        <div id="wordcloud" class="page">
-            <div class="page-header">
-                <h1 class="page-title">文本高频词汇分析</h1>
-                <p class="page-description">
-                    利用分词技术提取全书及不同阶段的核心词汇。通过词云对比分析故事前期（大闹天宫等）与后期（取经途中）的叙事重心差异。
-                </p>
-            </div>
+        <div class="charts-grid">
+          <div class="card">
+            <h4>📊 数据说明</h4>
+            <ul style="padding-left: 1.5rem">
+              <li><strong>妖怪来历：</strong>天庭下凡、本土成精、其他</li>
+              <li><strong>妖怪结局：</strong>被击杀、被收服、被神仙带回</li>
+              <li><strong>神仙派系：</strong>道教、佛教</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="margin: 0 0 0.75rem 0; color: #333">🔍 分析视角</h4>
+            <p style="margin: 0.5rem 0; color: #666">
+              通过饼图和柱状图展示不同人物特征的分布，帮助理解故事中的人物构成和发展脉络。
+            </p>
+            <p style="margin: 0.5rem 0; color: #666">
+              <strong>主要发现：</strong>
+            </p>
+            <ul style="margin: 0; padding-left: 1.2rem; color: #666">
+              <li>妖怪主要分为天庭下凡和本土成精两类</li>
+              <li>妖怪结局与被神仙带回、被击杀和被收服三种</li>
+              <li>神仙派系以佛教为主，道教神仙出场次数相对较少</li>
+              <li>随着取经进程，佛教神仙出场频率逐渐增加</li>
+            </ul>
+            <p
+              style="
+                margin: 0.75rem 0 0 0;
+                color: #666;
+                font-size: 0.9rem;
+                font-style: italic;
+              "
+            >
+              💡 提示：点击饼图扇区可以查看详细分析
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <div class="chart-container">
-                <div style="padding: 1rem;">
-                    <h3>全书高频词汇</h3>
-                </div>
-                <div id="wordcloud-all-chart" class="chart-wrapper"></div>
-            </div>
-
-            <div class="charts-grid">
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>前期高频词（第1-30回）</h3>
-                    </div>
-                    <div id="wordcloud-early-chart" class="chart-wrapper"></div>
-                </div>
-
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>后期高频词（第71-100回）</h3>
-                    </div>
-                    <div id="wordcloud-late-chart" class="chart-wrapper"></div>
-                </div>
-            </div>
-
-            <div class="charts-grid">
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>孙悟空专属词汇热力图</h3>
-                    </div>
-                    <div id="wordcloud-sunwukong-chart" class="chart-wrapper short"></div>
-                </div>
-
-                <div class="chart-container">
-                    <div style="padding: 1rem;">
-                        <h3>唐僧专属词汇热力图</h3>
-                    </div>
-                    <div id="wordcloud-tangmonk-chart" class="chart-wrapper short"></div>
-                </div>
-            </div>
+      <!-- ========== 取经路线 ========== -->
+      <div id="route" class="page">
+        <div class="page-header">
+          <h1 class="page-title">取经路线空间可视化</h1>
+          <p class="page-description">
+            基于文本叙事顺序，还原从大唐长安至西天灵山的地理路径。通过空间坐标标注关键地点与磨难事件，展现叙事结构的空间维度。
+          </p>
         </div>
 
-        <!-- ========== 评价分析 ========== -->
-        <div id="sentiment" class="page">
-            <div class="page-header">
-                <h1 class="page-title">角色情感倾向与评价分析</h1>
-                <p class="page-description">
-                    整合读者评论文本，通过关键词提取与情感分类，量化分析大众对《西游记》核心人物的认知维度与情感态度。
-                </p>
-            </div>
-
-            <div class="chart-container">
-                <div style="padding: 1rem;">
-                    <h3>人物评价关键词云</h3>
-                </div>
-                <div id="sentiment-keywords-chart" class="chart-wrapper"></div>
-            </div>
-
-            <div class="charts-grid sentiment-main-grid">
-                <div class="card sentiment-chart-card">
-                    <div class="card-head" style="margin-bottom: 1.5rem;">
-                        <h4>📊 评论类型分布</h4>
-                    </div>
-                    <div id="review-type-chart" class="chart-wrapper" style="flex: 1; min-height: 400px;"></div>
-                </div>
-
-                <div class="card hero-card" id="main-review-card">
-
-                    <div class="card-head">
-
-                        <h4>📌 主要评价</h4>
-
-                        <div class="hint">点击人物展开；点击关键词可筛选</div>
-
-                    </div>
-
-
-
-                    <!-- 筛选条 -->
-
-                    <div class="filter-bar" id="tagBar">
-
-                        <span class="filter-label">关键词：</span>
-
-                        <button class="tag is-active" data-tag="all">全部</button>
-
-                        <button class="tag" data-tag="聪慧">聪慧</button>
-
-                        <button class="tag" data-tag="勇敢">勇敢</button>
-
-                        <button class="tag" data-tag="顽皮">顽皮</button>
-
-                        <button class="tag" data-tag="善良">善良</button>
-
-                        <button class="tag" data-tag="坚定">坚定</button>
-
-                        <button class="tag" data-tag="幽默">幽默</button>
-
-                        <button class="tag" data-tag="人性化">人性化</button>
-
-                        <button class="tag" data-tag="忠诚">忠诚</button>
-
-                        <button class="tag" data-tag="憨厚">憨厚</button>
-
-                        <button class="tag" data-tag="尽职">尽职</button>
-
-                        <button class="tag" data-tag="贪婪">贪婪</button>
-
-                    </div>
-
-
-
-                    <!-- 人物卡片列表 -->
-
-                    <div class="role-grid" id="roleGrid">
-
-                        <details class="role" data-tags="聪慧 勇敢 顽皮" open>
-
-                            <summary>
-
-                                <span class="role-name">孙悟空</span>
-
-                                <span class="role-sub">齐天大圣</span>
-
-                                <span class="chev">▾</span>
-
-                            </summary>
-
-                            <div class="role-body">
-
-                                <div class="chips">
-
-                                    <span class="chip">聪慧</span>
-
-                                    <span class="chip">勇敢</span>
-
-                                    <span class="chip">顽皮</span>
-
-                                </div>
-
-                                <p class="role-desc">读者往往把他视为"反叛与自由意志"的象征，评价集中在机智、行动力与戏谑感。</p>
-
-                            </div>
-
-                        </details>
-
-
-
-                        <details class="role" data-tags="善良 坚定">
-
-                            <summary>
-
-                                <span class="role-name">唐僧</span>
-
-                                <span class="role-sub">取经主心骨</span>
-
-                                <span class="chev">▾</span>
-
-                            </summary>
-
-                            <div class="role-body">
-
-                                <div class="chips">
-
-                                    <span class="chip">心地善良</span>
-
-                                    <span class="chip">意志坚定</span>
-
-                                </div>
-
-                                <p class="role-desc">评价常呈"两极"：一方面赞其信念与慈悲，另一方面也会质疑其理想主义与不够机变。</p>
-
-                            </div>
-
-                        </details>
-
-
-
-                        <details class="role" data-tags="贪婪 幽默 人性化">
-
-                            <summary>
-
-                                <span class="role-name">猪八戒</span>
-
-                                <span class="role-sub">人间烟火气</span>
-
-                                <span class="chev">▾</span>
-
-                            </summary>
-
-                            <div class="role-body">
-
-                                <div class="chips">
-
-                                    <span class="chip">贪婪</span>
-
-                                    <span class="chip">幽默</span>
-
-                                    <span class="chip">人性化</span>
-
-                                </div>
-
-                                <p class="role-desc">读者往往在他身上看到"真实欲望"，所以评价既有调侃也有共情。</p>
-
-                            </div>
-
-                        </details>
-
-
-
-                        <details class="role" data-tags="忠诚 憨厚 尽职">
-
-                            <summary>
-
-                                <span class="role-name">沙和尚</span>
-
-                                <span class="role-sub">情绪稳定</span>
-
-                                <span class="chev">▾</span>
-
-                            </summary>
-
-                            <div class="role-body">
-
-                                <div class="chips">
-
-                                    <span class="chip">忠诚</span>
-
-                                    <span class="chip">憨厚</span>
-
-                                    <span class="chip">尽职</span>
-
-                                </div>
-
-                                <p class="role-desc">评论中他常被描述为"可靠但存在感弱"，属于团队的承托角色。</p>
-
-                            </div>
-
-                        </details>
-
-                    </div>
-
-                </div>
-            </div>
+        <div class="chart-container">
+          <div id="route-chart" class="chart-wrapper tall"></div>
         </div>
+
+        <div id="route-summary"></div>
+
+        <div class="charts-grid">
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; text-align: left; color: #2d3748">
+              📍 路线详细信息
+            </h3>
+            <div id="route-info">加载中...</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom: 1.5rem; text-align: left; color: #2d3748">
+              ⏱️ 行程节点速览
+            </h3>
+            <div id="route-stats">加载中...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 高频词汇 ========== -->
+      <div id="wordcloud" class="page">
+        <div class="page-header">
+          <h1 class="page-title">文本高频词汇分析</h1>
+          <p class="page-description">
+            利用分词技术提取全书及不同阶段的核心词汇。通过词云对比分析故事前期（大闹天宫等）与后期（取经途中）的叙事重心差异。
+          </p>
+        </div>
+
+        <div class="chart-container">
+          <div style="padding: 1rem">
+            <h3>全书高频词汇</h3>
+          </div>
+          <div id="wordcloud-all-chart" class="chart-wrapper"></div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>前期高频词（第1-30回）</h3>
+            </div>
+            <div id="wordcloud-early-chart" class="chart-wrapper"></div>
+          </div>
+
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>后期高频词（第71-100回）</h3>
+            </div>
+            <div id="wordcloud-late-chart" class="chart-wrapper"></div>
+          </div>
+        </div>
+
+        <div class="charts-grid">
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>孙悟空专属词汇热力图</h3>
+            </div>
+            <div
+              id="wordcloud-sunwukong-chart"
+              class="chart-wrapper short"
+            ></div>
+          </div>
+
+          <div class="chart-container">
+            <div style="padding: 1rem">
+              <h3>唐僧专属词汇热力图</h3>
+            </div>
+            <div
+              id="wordcloud-tangmonk-chart"
+              class="chart-wrapper short"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== 评价分析 ========== -->
+      <div id="sentiment" class="page">
+        <div class="page-header">
+          <h1 class="page-title">角色情感倾向与评价分析</h1>
+          <p class="page-description">
+            整合读者评论文本，通过关键词提取与情感分类，量化分析大众对《西游记》核心人物的认知维度与情感态度。
+          </p>
+        </div>
+
+        <div class="chart-container">
+          <div style="padding: 1rem">
+            <h3>人物评价关键词云</h3>
+          </div>
+          <div id="sentiment-keywords-chart" class="chart-wrapper"></div>
+        </div>
+
+        <div class="charts-grid sentiment-main-grid">
+          <div class="card sentiment-chart-card">
+            <div class="card-head" style="margin-bottom: 1.5rem">
+              <h4>📊 评论类型分布</h4>
+            </div>
+            <div
+              id="review-type-chart"
+              class="chart-wrapper"
+              style="flex: 1; min-height: 400px"
+            ></div>
+          </div>
+
+          <div class="card hero-card" id="main-review-card">
+            <div class="card-head">
+              <h4>📌 主要评价</h4>
+
+              <div class="hint">点击人物展开；点击关键词可筛选</div>
+            </div>
+
+            <!-- 筛选条 -->
+
+            <div class="filter-bar" id="tagBar">
+              <span class="filter-label">关键词：</span>
+
+              <button class="tag is-active" data-tag="all">全部</button>
+
+              <button class="tag" data-tag="聪慧">聪慧</button>
+
+              <button class="tag" data-tag="勇敢">勇敢</button>
+
+              <button class="tag" data-tag="顽皮">顽皮</button>
+
+              <button class="tag" data-tag="善良">善良</button>
+
+              <button class="tag" data-tag="坚定">坚定</button>
+
+              <button class="tag" data-tag="幽默">幽默</button>
+
+              <button class="tag" data-tag="人性化">人性化</button>
+
+              <button class="tag" data-tag="忠诚">忠诚</button>
+
+              <button class="tag" data-tag="憨厚">憨厚</button>
+
+              <button class="tag" data-tag="尽职">尽职</button>
+
+              <button class="tag" data-tag="贪婪">贪婪</button>
+            </div>
+
+            <!-- 人物卡片列表 -->
+
+            <div class="role-grid" id="roleGrid">
+              <details class="role" data-tags="聪慧 勇敢 顽皮" open>
+                <summary>
+                  <span class="role-name">孙悟空</span>
+
+                  <span class="role-sub">齐天大圣</span>
+
+                  <span class="chev">▾</span>
+                </summary>
+
+                <div class="role-body">
+                  <div class="chips">
+                    <span class="chip">聪慧</span>
+
+                    <span class="chip">勇敢</span>
+
+                    <span class="chip">顽皮</span>
+                  </div>
+
+                  <p class="role-desc">
+                    读者往往把他视为"反叛与自由意志"的象征，评价集中在机智、行动力与戏谑感。
+                  </p>
+                </div>
+              </details>
+
+              <details class="role" data-tags="善良 坚定">
+                <summary>
+                  <span class="role-name">唐僧</span>
+
+                  <span class="role-sub">取经主心骨</span>
+
+                  <span class="chev">▾</span>
+                </summary>
+
+                <div class="role-body">
+                  <div class="chips">
+                    <span class="chip">心地善良</span>
+
+                    <span class="chip">意志坚定</span>
+                  </div>
+
+                  <p class="role-desc">
+                    评价常呈"两极"：一方面赞其信念与慈悲，另一方面也会质疑其理想主义与不够机变。
+                  </p>
+                </div>
+              </details>
+
+              <details class="role" data-tags="贪婪 幽默 人性化">
+                <summary>
+                  <span class="role-name">猪八戒</span>
+
+                  <span class="role-sub">人间烟火气</span>
+
+                  <span class="chev">▾</span>
+                </summary>
+
+                <div class="role-body">
+                  <div class="chips">
+                    <span class="chip">贪婪</span>
+
+                    <span class="chip">幽默</span>
+
+                    <span class="chip">人性化</span>
+                  </div>
+
+                  <p class="role-desc">
+                    读者往往在他身上看到"真实欲望"，所以评价既有调侃也有共情。
+                  </p>
+                </div>
+              </details>
+
+              <details class="role" data-tags="忠诚 憨厚 尽职">
+                <summary>
+                  <span class="role-name">沙和尚</span>
+
+                  <span class="role-sub">情绪稳定</span>
+
+                  <span class="chev">▾</span>
+                </summary>
+
+                <div class="role-body">
+                  <div class="chips">
+                    <span class="chip">忠诚</span>
+
+                    <span class="chip">憨厚</span>
+
+                    <span class="chip">尽职</span>
+                  </div>
+
+                  <p class="role-desc">
+                    评论中他常被描述为"可靠但存在感弱"，属于团队的承托角色。
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ========== 底部 ========== -->
     <footer>
-        <p>《西游记》文本数据可视化分析项目 © 2025</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">数据来源：《西游记》原著文本 </p>
+      <p>《西游记》文本数据可视化分析项目 © 2025</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem">
+        数据来源：《西游记》原著文本
+      </p>
     </footer>
 
     <!-- ========== 脚本 ========== -->
@@ -470,6 +463,5 @@
     <script src="src/js/pages/route.js"></script>
     <script src="src/js/pages/wordcloud.js"></script>
     <script src="src/js/pages/sentiment.js"></script>
-</body>
-
+  </body>
 </html>
